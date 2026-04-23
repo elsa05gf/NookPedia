@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(135deg, #FF2525, #D77300);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Subimos todo el contenido */
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-150px);
+}
+
+/* Logo + título alineados */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 80px;
+}
+
+.logo {
+    width: 90px;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 85px;
+    font-weight: 700;
+    color: white;
+    margin: 0px;
+}
+
+/* Botones grandes Exit/Start */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 60px; 
+    margin-top: 120px; 
+}
+
+
+.btn {
+    width: 330px;
+    padding: 28px;
+    border: none;
+    border-radius: 45px;
+    font-size: 32px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.start {
+    background-color: white;
+    color: #D77300;
+}
+
+.exit {
+    background-color: rgba(255,255,255,0.3);
+    color: white;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+}

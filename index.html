@@ -35,7 +35,6 @@
                 <img src="imagenes/Logo_ACRINDER.png" alt="">
                 <h1 class="logo-title">ACRINDER</h1>
             </div>
-           <p class="logo-tagline">Find your Perfect Match</p>
            </header>
 
            <!-- Buttons -->
@@ -47,5 +46,58 @@
         </section>
     </main>
 
+<!-- SWIPE / TINDER -->
+    <main id="screen-swipe" class="screen" aria-label="Pantalla de swipe" hidden > 
+
+        <section>
+
+            <header>
+
+                <div>
+                    <img src="imagenes/Logo_ACRINDER.png" alt="">
+                    <span class="logo-title-sm">ACRINDER</span>
+                </div>
+
+            </header>
+<!-- CARD STACK -->
+            <div lass="card-stack" id="card-stack" role="region" aria-label="Tarjeta de personaje">
+                <!-- Card Content (Metido por JS) -->
+                <article class="villager-card" id="villager-card">
+                    <div class="villager-card-imagewrapper">
+                        <img src="" alt="" id="card-img" class="villager-card-img">
+                    </div>
+
+                    <div villager-card-body>
+                        <h2 class="villager-card-name" id="card-name">...</h2>
+                        <p class="villager-card-quote" id="card-quote">...</p>
+                        <p class="villager-card-cta">Want to know
+                         <span id="card-pronoun">them</span>better?
+                         <button id="button-know-more">
+                            <i class="bi bi-arrow-right-circle-fill" aria-hidden="true"></i>
+                        </button>
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Action Buttons -->
+
+            <div class="swipe-controls">
+                <button id="btn-nope" class="ctrl-btn ctrl-btn--nope" type="button" aria-label="No me gusta">
+                    <i class="bi bi-x-lg" aria-hidden="true"></i>
+                </button>
+                 <button id="btn-like" class="ctrl-btn ctrl-btn--like" type="button" aria-label="Me gusta">
+                     <i class="bi bi-heart-fill" aria-hidden="true"></i>
+                 </button>
+            </div>
+
+        </section>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- GSAP core + Draggable plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>

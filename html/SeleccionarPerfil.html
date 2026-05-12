@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&family=Epunda+Slab:wght@300;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&family=Epunda+Slab:wght@300;700&display=swap"
+        rel="stylesheet">
 
     <!-- Tu CSS -->
     <link rel="stylesheet" href="../css/styles.css">
@@ -21,111 +24,134 @@
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 </head>
+
 <body class="SeleccionarPerfil">
     <header>
         <nav class="landing-navbar">
 
-        <!-- MENÚ ESCRITORIO -->
-        <div class="desktop-menu d-none d-lg-flex">
+            <!-- MENÚ ESCRITORIO -->
+            <div class="desktop-menu d-none d-lg-flex">
 
-            <div class="menu-box">
-                <a href="index.html#acrinder" class="landing-link">
+                <div class="menu-box">
+                    <a href="index.html#acrinder" class="landing-link">
 
-                    <img src="../imagenes/Logo_Api_Marrón.webp"
-                         alt="Logo"
-                         class="logo-leaf">
+                        <img src="../imagenes/Logo_Api_Marrón.webp" alt="Logo" class="logo-leaf">
 
-                    <span>ACRINDER</span>
+                        <span>ACRINDER</span>
 
-                </a>
+                    </a>
+                </div>
+
+                <div class="menu-box">
+                    <a href="index.html#about" class="landing-link">
+                        ABOUT
+                    </a>
+                </div>
+
+                <div class="menu-box">
+                    <a href="index.html#location" class="landing-link">
+                        LOCATION
+                    </a>
+                </div>
+
+                <div class="menu-box">
+                    <a href="index.html#date" class="landing-link">
+                        MATCH
+                    </a>
+                </div>
+
             </div>
 
-            <div class="menu-box">
+            <!-- BOTÓN MÓVIL -->
+            <button class="mobile-menu-btn d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mobileMenu">
+
+                <img src="../imagenes/Logo_Api_Marrón.webp" alt="Logo" class="logo-leaf">
+            </button>
+
+            <!-- MENÚ MÓVIL -->
+            <div class="collapse mobile-menu" id="mobileMenu">
+
+                <a href="index.html#acrinder" class="landing-link">
+                    ACRINDER
+                </a>
                 <a href="index.html#about" class="landing-link">
                     ABOUT
                 </a>
-            </div>
-
-            <div class="menu-box">
                 <a href="index.html#location" class="landing-link">
                     LOCATION
                 </a>
-            </div>
-
-            <div class="menu-box">
                 <a href="index.html#date" class="landing-link">
                     MATCH
                 </a>
+
             </div>
 
-        </div>
-
-        <!-- BOTÓN MÓVIL -->
-        <button class="mobile-menu-btn d-lg-none"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mobileMenu">
-
-            <img src="../imagenes/Logo_Api_Marrón.webp"
-                 alt="Logo"
-                 class="logo-leaf">
-        </button>
-
-        <!-- MENÚ MÓVIL -->
-        <div class="collapse mobile-menu" id="mobileMenu">
-
-            <a href="index.html#acrinder" class="landing-link">
-                ACRINDER
-            </a>
-            <a href="index.html#about" class="landing-link">
-                ABOUT
-            </a>
-            <a href="index.html#location" class="landing-link">
-                LOCATION
-            </a>
-            <a href="index.html#date" class="landing-link">
-                MATCH
-            </a>
-
-        </div>
-
-    </nav>
+        </nav>
 
     </header>
 
-   <main class="d-flex flex-column justify-content-center align-items-center">
+    <main class="d-flex flex-column justify-content-center align-items-center">
 
-    <div class="caja-bootstrap text-center">
-        <p class="mb-2">Before picking your future soulmate, we need you to fill your profile.</p>
-        <p class="mb-4">What are your pronouns?</p>
-    </div>
+        <!-- CAJA INFORMATIVA -->
+        <div class="caja-bootstrap text-center">
+            <p class="mb-2">Before picking your future soulmate, we need you to fill your profile.</p>
+            <p class="mb-4">What are your pronouns?</p>
+        </div>
 
-    <!-- TRES CÍRCULOS CENTRADOS FUERA DEL CUADRADO -->
-    <div class="d-flex justify-content-center align-items-start flex-wrap separacion-circulos">
-    
-    <div class="d-flex flex-column align-items-center contenedor-circulo">
-        <div class="rounded-circle circulo-pronombre d-flex justify-content-center align-items-center overflow-hidden"> <img src="../imagenes/They.webp" alt="They" class="img-fluid"> </div>
-        <img src="../imagenes/CuadroTextoPequeño.webp" 
-             alt="Texto" 
-             class="mt-5 w-100">
-    </div>
-    
-    <div class="d-flex flex-column align-items-center contenedor-circulo">
-        <div class="rounded-circle circulo-pronombre d-flex justify-content-center align-items-center overflow-hidden"> <img src="../imagenes/She.webp" alt="She" class="img-fluid"> </div>
-        <img src="../imagenes/CuadroTextoPequeño.webp" 
-             alt="Texto" 
-             class="mt-5 w-100">
-    </div>
-    
-    <div class="d-flex flex-column align-items-center contenedor-circulo">
-        <div class="rounded-circle circulo-pronombre d-flex justify-content-center align-items-center overflow-hidden"> <img src="../imagenes/He.webp" alt="He" class="img-fluid"> </div>
-        <img src="../imagenes/CuadroTextoPequeño.webp" 
-             alt="Texto" 
-             class="mt-5 w-100">
-    </div>
-    
-</div>
-</main>
+        <!-- TRES CÍRCULOS CENTRADOS -->
+        <div class="d-flex justify-content-center align-items-start flex-wrap separacion-circulos">
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- CÍRCULO 1: THEY/THEM -->
+            <div class="d-flex flex-column align-items-center contenedor-circulo">
+                <!-- Contenedor para el círculo y la imagen -->
+                <div
+                    class="rounded-circle circulo-pronombre d-flex justify-content-center align-items-center overflow-hidden">
+                    <img src="../imagenes/They.webp" alt="They" class="img-fluid">
+                </div>
+                <!-- Contenedor para la imagen (cuadro de texto) y el texto superpuesto -->
+                <div class="position-relative mt-5 w-100">
+                    <img src="../imagenes/CuadroTextoPequeño.webp" alt="Texto" class="w-100">
+                    <div class="position-absolute top-50 start-50 translate-middle text-nowrap texto-pronombre">
+                        They/them
+                    </div>
+                </div>
+            </div>
+
+            <!-- CÍRCULO 2: SHE/HER -->
+            <div class="d-flex flex-column align-items-center contenedor-circulo">
+                <!-- Contenedor para el círculo y la imagen -->
+                <div
+                    class="rounded-circle circulo-pronombre d-flex justify-content-center align-items-center overflow-hidden">
+                    <img src="../imagenes/She.webp" alt="She" class="img-fluid">
+                </div>
+                <!-- Contenedor para la imagen (cuadro de texto) y el texto superpuesto -->
+                <div class="position-relative mt-5 w-100">
+                    <img src="../imagenes/CuadroTextoPequeño.webp" alt="Texto" class="w-100">
+                    <div class="position-absolute top-50 start-50 translate-middle text-nowrap texto-pronombre">
+                        She/her
+                    </div>
+                </div>
+            </div>
+
+            <!-- CÍRCULO 3: HE/HIM -->
+            <div class="d-flex flex-column align-items-center contenedor-circulo">
+                <!-- Contenedor para el círculo y la imagen -->
+                <div
+                    class="rounded-circle circulo-pronombre d-flex justify-content-center align-items-center overflow-hidden">
+                    <img src="../imagenes/He.webp" alt="He" class="img-fluid">
+                </div>
+                <!-- Contenedor para la imagen (cuadro de texto) y el texto superpuesto -->
+                <div class="position-relative mt-5 w-100">
+                    <img src="../imagenes/CuadroTextoPequeño.webp" alt="Texto" class="w-100">
+                    <div class="position-absolute top-50 start-50 translate-middle text-nowrap texto-pronombre">
+                        He/him
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

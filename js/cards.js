@@ -45,6 +45,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const noBtn = document.getElementById("noBtn");
         const matchBtn = document.getElementById("matchBtn");
 
+        // Fallback ampliado por si la API falla o no hay key
+        const sampleVillagers = [
+            { name: "Audie", quote: "Be the kind of person your future self won't regret having been.", img: "https://dodo.ac/np/images/1/1b/Audie_NH.png" },
+            { name: "Raymond", quote: "Stay on brand!", img: "https://dodo.ac/np/images/2/2a/Raymond_NH.png" },
+            { name: "Marshal", quote: "Seize the day!", img: "https://dodo.ac/np/images/9/97/Marshal_NH.png" },
+            { name: "Ankha", quote: "All that glitters is not gold.", img: "https://dodo.ac/np/images/5/56/Ankha_NH.png" },
+            { name: "Apollo", quote: "What goes up must come down.", img: "https://dodo.ac/np/images/2/28/Apollo_NH.png" },
+            { name: "Cherry", quote: "One dog's bark is another dog's bite.", img: "https://dodo.ac/np/images/b/b8/Cherry_NH.png" },
+            { name: "Roald", quote: "You must learn to waddle before you can walk.", img: "https://dodo.ac/np/images/8/80/Roald_NH.png" },
+            { name: "Shino", quote: "Better the demon you know than the demon you don't.", img: "https://dodo.ac/np/images/3/30/Shino_NH.png" },
+            { name: "Sasha", quote: "Timing is everything.", img: "https://dodo.ac/np/images/1/10/Sasha_NH.png" }
+        ];
 
         // Función para mezclar el array aleatoriamente (Fisher-Yates)
         function shuffleArray(array) {
@@ -57,27 +69,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
         async function initGame() {
             try {
-                if (API_KEY !== '955e9378-ac80-4d2d-9f7f-09003656bb3c') {
-                   
-                    const response = await fetch(API_URL, {
-                        headers: { 'X-API-Key': API_KEY, 'Accept-Version': '1.0.0' }
-                    });
-                    if (!response.ok) throw new Error('API Error');
-                    const data = await response.json();
-                    
-                    const mappedData = data.map(v => ({
+                // Intentamos conectar a la API directamente, sin comprobaciones previas
+                const response = await fetch(API_URL, {
+                    headers: { 'X-API-Key': API_KEY, 'Accept-Version': '1.0.0' }
+                });
+                
+                if (!response.ok) throw new Error('Error al conectar con Nookipedia');
+                
+                const data = await response.json();
+                
+                // Filtramos para que solo salgan aldeanos de New Horizons y que tengan foto
+                const mappedData = data
+                    .filter(v => v.image_url && v.nh_details)
+                    .map(v => ({
                         name: v.name,
-                        quote: v.nh_details ? v.nh_details.quote : "¡Encantado de conocerte!",
+                        quote: v.nh_details.quote || "¡Encantado de conocerte!",
                         img: v.image_url
                     }));
-                    
-                    // Mezcla de la lista de villagers
-                    villagersQueue = shuffleArray(mappedData);
-                } else {
-                    villagersQueue = shuffleArray([...sampleVillagers]);
-                }
+                
+                // Mezclamos la lista completa
+                villagersQueue = shuffleArray(mappedData);
+                
             } catch (error) {
-                console.error("Usando fallback de emergencia", error);
+                // Si hay algún problema (ej. te quedas sin internet), carga los de repuesto
+                console.error("Usando aldeanos de repuesto por error en la API:", error);
                 villagersQueue = shuffleArray([...sampleVillagers]);
             }
             
@@ -88,6 +103,9 @@ document.addEventListener("DOMContentLoaded", () => {
         function createCardElement(villager) {
             const card = document.createElement("div");
             card.className = "card-item";
+            
+            // EL SEGUNDO TRUCO: Añadimos 'onerror' a la etiqueta <img>
+            // Si la imagen falla, cargará el logo de ACRINDER en su lugar para no dejar el hueco feo
             card.innerHTML = `
                 <div class="card-info">
                     <h2 class="card-name">${villager.name}</h2>
@@ -95,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p class="card-cta">¿Te gustaría<br>conocerla mejor?</p>
                 </div>
                 <div class="card-img-container">
-                    <img src="${villager.img}" alt="${villager.name}">
+                    <img src="${villager.img}" alt="${villager.name}" onerror="this.src='../imagenes/Logo_API_Marrón'; this.style.opacity='0.5';">
                 </div>
             `;
             return card;

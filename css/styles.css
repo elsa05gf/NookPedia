@@ -1,0 +1,49 @@
+:root {
+    --ac-cream: #FFFDF3;
+    --ac-brown: #5A4E42;
+    --ac-pink-light: #FFC0CB;
+    --ac-pink-dark: #F57597;
+}
+
+/* --- ESTILOS DE LA PANTALLA DE INICIO --- */
+
+#inicio-demo {
+    /* Gradiente rosa */
+    background: linear-gradient(90deg, var(--ac-pink-light) 0%, var(--ac-pink-dark) 100%);
+
+}
+
+.logo-img {
+    width: 60px; 
+    height: auto;
+    display: flex;
+}
+
+.logo-title {
+    font-family: 'Zilla Slab', serif; 
+    font-size: 3.5rem;
+    color: var(--ac-cream);
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.btn-acrinder {
+    background-color: var(--ac-cream);
+    color: var(--ac-brown);
+    border: none;
+    border-radius: 50px;
+    padding: 8px 45px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 280px;
+    
+    /* Sombra para el efecto de botón 3D tipo juego */
+    box-shadow: 0px 6px 0px #D8CBAE, 0px 10px 15px rgba(0,0,0,0.15);
+    cursor: pointer;
+    outline: none;
+}
+
+/* Ocultar el botón original predeterminado si es necesario */
+button {
+    font-family: inherit;
+}

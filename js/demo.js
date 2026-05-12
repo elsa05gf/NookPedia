@@ -72,3 +72,21 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+// --- 3. LÓGICA DE TRANSICIÓN A OTRA PÁGINA (Botón Start) ---
+    const btnStart = document.getElementById("btn-start");
+    const inicioDemo = document.getElementById("inicio-demo");
+
+    btnStart.addEventListener("click", () => {
+        // Animamos la salida de la pantalla actual para que el cambio no sea brusco
+        gsap.to(inicioDemo, {
+            opacity: 0,
+            y: -30,
+            duration: 0.5,
+            ease: "power2.in",
+            onComplete: () => {
+                // Una vez termina la animación, redirigimos al nuevo HTML
+                window.location.href = "../html/demoCards.html";
+            }
+        });
+    });

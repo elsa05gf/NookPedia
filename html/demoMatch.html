@@ -21,6 +21,52 @@
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="match-final-bg">
 
+    <main id="match-screen" class="vh-100 position-relative d-flex flex-column align-items-center justify-content-center overflow-hidden">
+        
+        <div class="side-hearts left-hearts">
+            <img src="../imagenes/CorazonOscuro.webp" alt="" class="match-heart-img">
+            <img src="../imagenes/CorazonOscuro.webp" alt="" class="match-heart-img">
+            <img src="../imagenes/CorazonOscuro.webp" alt="" class="match-heart-img">
+            <img src="../imagenes/CorazonOscuro.webp" alt="" class="match-heart-img">
+        </div>
+        
+        <div class="side-hearts right-hearts">
+            <img src="../imagenes/CorazonOscuro.webp" alt="" class="match-heart-img">
+            <img src="../imagenes/CorazonOscuro.webp" alt="" class="match-heart-img">
+            <img src="../imagenes/CorazonOscuro.webp" alt="" class="match-heart-img">
+            <img src="../imagenes/CorazonOscuro.webp" alt="" class="match-heart-img">
+        </div>
+
+        <header class="d-flex align-items-center gap-3 mb-4 z-1">
+            <img src="../imagenes/Logo_ACRINDER.png" alt="Logo" class="match-logo-img">
+            <h1 class="logo-title m-0">ACRINDER</h1>
+        </header>
+
+        <div class="container z-1 max-w-4xl px-4">
+            <div class="row align-items-center justify-content-center">
+                
+                <div class="col-12 col-md-5 d-flex justify-content-center mb-4 mb-md-0 position-relative">
+                    <img id="match-img" src="" alt="Tu Match" class="match-villager-img">
+                </div>
+                
+                <div class="col-12 col-md-7">
+                    <div class="match-text-card p-4 p-md-5 text-center shadow-lg">
+                        <p class="m-0 match-text">
+                            Thanks to <strong>ACRINDER</strong>, you were able to enjoy a spectacular date with <strong id="match-name">...</strong>. <span id="pronoun-1">Her</span> looks attracted you, but <span id="pronoun-2">her</span> personality made you fall in love. Enjoy your beautiful romantic relationship!!!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <button id="btn-restart" class="match-arrow-btn position-absolute bottom-0 mb-3 z-1" aria-label="Volver al inicio">
+            <svg viewBox="0 0 24 24" width="50" height="50" fill="#FFFDF3">
+                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+            </svg>
+        </button>
+
+    </main>
 </body>

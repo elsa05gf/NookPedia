@@ -26,62 +26,111 @@
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 
 </head>
-<body>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>ACRINDER - App</title>
-  <!-- Google Fonts: Epunda Slab y Nunito -->
-  <link href="https://fonts.googleapis.com/css2?family=Epunda+Slab&family=Nunito&display=swap" rel="stylesheet">
-  <style>
-    /* (CSS se agregará en la siguiente sección) */
-  </style>
-</head>
-<body>
-  <!-- Menú de navegación fijo -->
-  <nav>
-    <ul>
-      <li><a href="#home" class="logo">ACRINDER <!-- aquí podría ir un logo o icono de hoja --></a></li>
-      <li><a href="#about">ABOUT</a></li>
-      <li><a href="#location">LOCATION</a></li>
-      <li><a href="#match">MATCH</a></li>
-    </ul>
-  </nav>
+<body class="LandingPage">
+    <header>
+        <nav class="landing-navbar">
 
-  <!-- Slide 1: Portada -->
-  <section id="home">
-    <h1>ACRINDER</h1>
-    <div class="speech">
-      Discover the new exclusive dating app from Animal Crossing
-    </div>
-    <!-- Imagen o ilustración principal (opcional): insertar aquí si se desea -->
-    <!-- <img src="tu-imagen-hero.jpg" alt="Ilustración principal"> -->
-  </section>
+        <!-- MENÚ ESCRITORIO -->
+        <div class="desktop-menu d-none d-lg-flex">
 
-  <!-- Slide 2: About -->
-  <!-- Línea superior rosa delimitadora -->
-  <div class="top-line"></div>
-  <section id="about">
-    <h2><span class="heart">♥</span> ABOUT <span class="heart">♥</span></h2>
-    <div class="about-container">
-      <div class="about-text">
-        <p>This app helps you find villagers of all types.</p>
-        <p>First up: the <span class="swipping">SWIPPING</span>. You can either move to the next villager swiping left or swipe right to drop a little heart on the one who makes you go 'aww' to head out on a date. Your call.</p>
-      </div>
-      <div class="about-image">
-        <!-- Inserta aquí la imagen de Isabelle -->
-        <!-- <img src="isabelle.png" alt="Isabelle de Animal Crossing"> -->
-      </div>
-    </div>
-  </section>
-  <!-- Línea inferior rosa delimitadora -->
-  <div class="bottom-line"></div>
+            <div class="menu-box">
+                <a href="#acrinder" class="landing-link">
 
-  <!-- JavaScript para scroll suave -->
-  <script>
-    /* (Código JS se agrega en la sección correspondiente) */
-  </script>
+                    <img src="../imagenes/Logo_Api_Marrón.webp"
+                         alt="Logo"
+                         class="logo-leaf">
+
+                    <span>ACRINDER</span>
+
+                </a>
+            </div>
+
+            <div class="menu-box">
+                <a href="#about" class="landing-link">
+                    ABOUT
+                </a>
+            </div>
+
+            <div class="menu-box">
+                <a href="#location" class="landing-link">
+                    LOCATION
+                </a>
+            </div>
+
+            <div class="menu-box">
+                <a href="#date" class="landing-link">
+                    MATCH
+                </a>
+            </div>
+
+        </div>
+
+        <!-- BOTÓN MÓVIL -->
+        <button class="mobile-menu-btn d-lg-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mobileMenu">
+
+            <img src="../imagenes/Logo_Api_Marrón.webp"
+                 alt="Logo"
+                 class="logo-leaf">
+        </button>
+
+        <!-- MENÚ MÓVIL -->
+        <div class="collapse mobile-menu" id="mobileMenu">
+
+            <a href="#acrinder" class="mobile-link">
+                ACRINDER
+            </a>
+
+            <a href="#about" class="mobile-link">
+                ABOUT
+            </a>
+
+            <a href="#location" class="mobile-link">
+                LOCATION
+            </a>
+
+            <a href="#date" class="mobile-link">
+                MATCH
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    </header>
+
+    <main>
+        <section id="acrinder">
+
+        </section>
+
+        <section id="about">
+
+        </section>
+
+        <section id="location">
+
+        </section>
+
+        <section id="date">
+
+        </section>
+
+    </main>
+
+    <footer class="Landing-footer">
+        
+        <div class="footer-top"></div>
+
+        <p>&copy; 2026 Animal Crossing. Todos los derechos reservados.</p>
+    </footer>
+
+    
+
+<!--PARA EL SLIDER CON BOOTSTRAP-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
-</html>
-

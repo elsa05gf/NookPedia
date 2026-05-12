@@ -1,8 +1,12 @@
 :root {
-    --ac-cream: #FFFAE5;
-    --ac-brown: #786951;
-    --ac-pink-light: #FEBDC3;
-    --ac-pink-dark: #EF758A;
+    --ac-cream: #FFFDF3;
+    --ac-brown: #5A4E42;
+    --ac-pink-light: #FFC0CB;
+    --ac-pink-dark: #F57597;
+    --ac-mint-blue: #7CC9C3;
+    --ac-green: #A4D4A2;
+    --ac-yellow: #F7D359;
+    --ac-red: #FF7C68;
 }
 
 /* --- ESTILOS DE LA PANTALLA DE INICIO --- */
@@ -73,8 +77,8 @@ button {
     z-index: 1;
 }
 .bg-presentation { background-color: #F6F1D9; } /* Color crema inicial */
-.bg-reject { background-color: #FA8A75; }       /* Color rojo al rechazar */
-.bg-accept { background-color: #93D3B6; }       /* Color verde al aceptar */
+.bg-reject { background: linear-gradient(90deg, var(--ac-yellow) 0%, var(--ac-red) 100%); }       /* Color rojo al rechazar */
+.bg-accept { background: linear-gradient(90deg, var(--ac-green) 0%, var(--ac-mint-blue) 100%); }       /* Color verde al aceptar */
 
 #bg-bottom {
     position: absolute;
@@ -204,8 +208,132 @@ button {
 }
 
 .ac-btn-yes {
-    background-color: #5ED1A3;
+    background: var(--ac-green);
     color: #F6F1D9;
 }
 
 /* DEMOCARDS STYLE  FINAL */
+
+/* DEMOINFO STYLE INICIO */
+
+.info-bg {
+    background: linear-gradient(135deg, #FFF9E6 0%, #F8EEBB 100%);
+    font-family: 'Nunito', sans-serif;
+    color: var(--ac-brown);
+}
+
+.max-w-5xl {
+    max-width: 1000px; /* Evita que las tarjetas se estiren demasiado en pantallas grandes */
+}
+
+/* --- TARJETA IZQUIERDA --- */
+.left-card {
+    background-color: var(--ac-cream);
+    border: 5px solid #66A3D2; /* Borde azul de tu imagen */
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+}
+
+.info-logo-img {
+    width: 35px;
+    height: auto;
+    filter: brightness(0.6) sepia(1) hue-rotate(10deg) saturate(1.5); /* Tinte marrón */
+}
+
+.info-logo-title {
+    font-family: 'Zilla Slab', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #827562;
+}
+
+.pink-image-box {
+    background-color: #FFAEC9; /* Rosa de la caja */
+    border-radius: 10px;
+    height: 300px;
+}
+
+.villager-portrait {
+    height: 110%; /* Para que sobresalga un pelín por arriba o se vea grande */
+    object-fit: contain;
+    filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.2));
+}
+
+/* Botón DATE */
+.btn-date {
+    background-color: #FFB3CA;
+    border: 4px solid #FF8EAB;
+    border-radius: 50px;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    padding: 10px 0;
+    text-shadow: 1px 1px 0px #FF8EAB, -1px -1px 0px #FF8EAB, 1px -1px 0px #FF8EAB, -1px 1px 0px #FF8EAB; /* Borde de texto */
+    cursor: pointer;
+    box-shadow: 0px 5px 0px #FF8EAB;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn-date:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px #FF8EAB;
+}
+
+/* --- TARJETA DERECHA --- */
+.right-card {
+    background-color: var(--ac-cream);
+    border-radius: 40px;
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Botón cerrar amarillo */
+.btn-close-yellow {
+    top: -15px;
+    right: -15px;
+    width: 50px;
+    height: 50px;
+    background-color: #F8E255;
+    border: 4px solid #EAE0B6;
+    border-radius: 50%;
+    color: #FF5A5A;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.15);
+    transition: transform 0.1s;
+}
+
+.btn-close-yellow:active {
+    transform: scale(0.9);
+}
+
+.personality-title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #7A6C5D;
+}
+
+.title-divider {
+    border: none;
+    border-top: 4px solid #7A6C5D;
+    opacity: 1;
+    width: 60%;
+    margin-top: 5px;
+}
+
+.stats-list li {
+    font-size: 1.1rem;
+    color: #4A4A4A;
+}
+
+.stat-icon {
+    font-size: 1.4rem;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* DEMOINFO STYLE FINAL */

@@ -79,12 +79,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 const data = await response.json();
                 
                 // Filtramos para que solo salgan aldeanos de New Horizons y que tengan foto
+               // Filtramos para que solo salgan aldeanos de New Horizons y que tengan foto
                 const mappedData = data
                     .filter(v => v.image_url && v.nh_details)
                     .map(v => ({
                         name: v.name,
                         quote: v.nh_details.quote || "¡Encantado de conocerte!",
-                        img: v.image_url
+                        img: v.image_url,
+                        // --- AQUÍ ESTÁN LOS DATOS NUEVOS ---
+                        species: v.species,
+                        gender: v.gender,
+                        personality: v.personality,
+                        sign: v.sign,
+                        birthday_month: v.birthday_month,
+                        birthday_day: v.birthday_day
                     }));
                 
                 // Mezclamos la lista completa
@@ -176,7 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
             })[0];
         }
 
-        function handleSwipe(cardElement, direction) {
+     function handleSwipe(cardElement, direction) {
             if (isAnimating) return;
             isAnimating = true;
             
@@ -189,9 +197,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 x: endX, rotation: rotationEnd, opacity: 0, duration: 0.4,
                 onComplete: () => {
                     isAnimating = false;
-                    // Aquí ocurre la magia: avanzamos al siguiente índice y dibujamos su carta
-                    currentIndex++;
-                    renderCurrentCard();
+                    
+                    // --- NUEVA LÓGICA AQUÍ ---
+                    if (isMatch) {
+                        // ¡ES UN MATCH! Guardamos los datos y vamos a la página de Info
+                        localStorage.setItem("matchedVillager", JSON.stringify(villagersQueue[currentIndex]));
+                        window.location.href = "demoInfo.html";
+                    } else {
+                        // NO ES MATCH. Pasamos al siguiente
+                        currentIndex++;
+                        renderCurrentCard();
+                    }
                 }
             });
         }

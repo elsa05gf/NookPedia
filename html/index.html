@@ -117,6 +117,49 @@
 
         <section id="date">
 
+    <!--CARRUSEL-->
+
+     <div class="date-container">
+
+        <h2 class="date-title">Find your perfect villager ♡</h2>
+
+        <div class="carousel-wrapper">
+
+            <!-- FLECHA IZQUIERDA -->
+            <button class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#animalCarousel"
+                    data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+             <div id="animalCarousel" class="carousel slide">
+
+                 <div class="carousel-inner" id="carouselContent"></div>
+
+             </div>
+
+            <!-- FLECHA DERECHA -->
+            <button class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#animalCarousel"
+                    data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"></span>
+
+            </button>
+
+        </div>
+
+
+        <p class="date-text">
+            Each villager has a distinct personality, so choose wisely!
+        </p>
+
+    </div>
+<!--FIN CARRUSEL-->
+
         </section>
 
     </main>
@@ -128,9 +171,90 @@
         <p>&copy; 2026 Animal Crossing. Todos los derechos reservados.</p>
     </footer>
 
-    
-
 <!--PARA EL SLIDER CON BOOTSTRAP-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!--No se que vainas para la API-->
+<script>
+
+const API_KEY = "955e9378-ac80-4d2d-9f7f-09003656bb3c";
+
+async function cargarVillagers() {
+
+    try {
+
+        const respuesta = await fetch(
+            "https://api.nookipedia.com/villagers?game=nh",
+            {
+                headers: {
+                    "X-API-KEY": API_KEY,
+                    "Accept-Version": "1.0.0"
+                }
+            }
+        );
+
+        const villagers = await respuesta.json();
+
+        console.log(villagers);
+
+        const carousel = document.getElementById("carouselContent");
+
+        // SOLO LOS PRIMEROS 10
+        const seleccionados = villagers.slice(0, 10);
+
+        // PARTIR EN GRUPOS DE 5
+        for(let i = 0; i < seleccionados.length; i += 5){
+
+            const grupo = seleccionados.slice(i, i + 5);
+
+            // CREAR SLIDE
+            const slide = document.createElement("div");
+
+            slide.classList.add("carousel-item");
+
+            // PRIMER SLIDE ACTIVO
+            if(i === 0){
+                slide.classList.add("active");
+            }
+
+            // FILA
+            const row = document.createElement("div");
+
+            row.className = "row justify-content-center align-items-center g-4";
+
+            // CREAR CADA VILLAGER
+            grupo.forEach(villager => {
+
+                const col = document.createElement("div");
+
+                col.className = "col-4 col-md-2";
+
+                col.innerHTML = `
+                    <img src="${villager.image_url}"
+                         class="villager-img"
+                         alt="${villager.name}">
+                `;
+
+                row.appendChild(col);
+
+            });
+
+            slide.appendChild(row);
+
+            carousel.appendChild(slide);
+
+        }
+
+    } catch(error) {
+
+        console.error("Error con la API:", error);
+
+    }
+
+}
+
+cargarVillagers();
+
+</script>
 
 </body>

@@ -1,4 +1,6 @@
 
+/*LANDING PAGE*/
+
 .LandingPage{
         margin: 0;
     padding: 0;
@@ -8,9 +10,123 @@
     padding: 2%;
 }
 #date{
-    background: linear-gradient(to right, #FEBDC3, #EF758A);
+    /*background: linear-gradient(to right, #FEBDC3, #EF758A);
     padding: 2%;
+    text-align: center;*/
+    background: linear-gradient(to right, #FEBDC3, #EF758A);
+
+    padding: 5rem 2rem;
+
+    text-align: center;
 }
+/*----------------CARRUSEL*------------------/
+
+/* CONTENEDOR */
+
+.date-container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* TÍTULO */
+
+.date-title{
+    font-family: "Epunda Slab", serif;
+    font-size: 3rem;
+    color: #FFFAE5;
+
+    margin-bottom: 3rem;
+}
+
+/* CAJA BLANCA DEL CARRUSEL */
+
+#animalCarousel{
+    background-color: #FFFAE5;
+
+    border-radius: 30px;
+
+    padding: 2rem 1rem;
+
+    position: relative;
+}
+
+/* IMÁGENES */
+
+.villager-img{
+    width: 100%;
+    max-width: 140px;
+
+    transition: transform 0.3s ease;
+}
+
+/* EFECTO HOVER */
+
+.villager-img:hover{
+    transform: scale(1.1);
+}
+
+/* TEXTO */
+
+.date-text{
+    margin-top: 2rem;
+
+    font-family: "Nunito", sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+
+    color: #FFFAE5;
+}
+
+/* FLECHAS */
+
+.carousel-control-prev,
+.carousel-control-next{
+    width: auto;
+}
+
+/* IZQUIERDA */
+
+.carousel-control-prev{
+    left: -60px;
+}
+
+/* DERECHA */
+
+.carousel-control-next{
+    right: -60px;
+}
+
+/* ICONOS */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+    background-size: 100%;
+
+    width: 3rem;
+    height: 3rem;
+
+    filter: brightness(0) invert(1);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px){
+
+    .date-title{
+        font-size: 2rem;
+    }
+
+    #animalCarousel{
+        padding: 2rem 1rem;
+    }
+
+    .villager-img{
+        max-width: 90px;
+    }
+}
+/*---------------------FIN CARRUSEL-----------------------*/
+
+
 #about{
     background-color: #FFFAE5;
     padding: 2%;
@@ -19,6 +135,7 @@
     background-color: #7CC9C3;
     padding: 2%;
 }
+/*footer*/
 .Landing-footer{
      background-color: #FFFAE5;
     height: 120px;

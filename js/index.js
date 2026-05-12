@@ -7,3 +7,5 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+const API_KEY = "955e9378-ac80-4d2d-9f7f-09003656bb3c";

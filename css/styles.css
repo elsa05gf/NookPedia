@@ -50,7 +50,15 @@
     gap: 10rem 
 }
 
-/* Contenedor de cada círculo con su imagen */
+/* Imagen dentro del círculo */
+.circulo-pronombre img {
+    object-fit: cover;
+    object-position: center 0%;  
+    width: 100%;
+    height: 100%;
+}
+
+/* Contenedor de cada círculo con su cuadro de texto */
 .contenedor-circulo {
     width: min(300px, 45vw);
 }

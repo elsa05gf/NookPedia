@@ -1,24 +1,29 @@
 /*SELECCIONAR PERFIL*/
 
 .SeleccionarPerfil{
+
     margin: 0;
-    min-height: 100vh;
+    padding: 0;
+    height: 100vh;           /* ← Cambia max-height por height */
+    overflow: hidden;        /* ← Evita el scroll en todo el body */
 
     background: linear-gradient(to right, #FEBDC3, #EF758A);
 
     font-family: 'Nunito', sans-serif;
 }
 
+/*CajaInformativa*/
 .caja-bootstrap{
-    width: 75%;
 
-    max-width: 700px;
+    margin-top: 4%;        /* ← AÑADE: menos espacio arriba (antes no tenía) */
+   
+    margin-bottom: 3vh; 
 
-    margin-top: 10vh;
+    width: 60%;
 
     background-color: #FFFAE5;
 
-    border: 0.4rem solid #786951;
+    border: 0.5rem solid #786951;
 
     border-radius: 2rem;
 
@@ -29,12 +34,27 @@
     color: #786951;
 
     font-family: 'Nunito', sans-serif;
-
-    font-size: 1.3rem;
+    font-weight: bold;
+    font-size: 2rem;
 }
 
+/*Círculos de Pronombres*/
+.circulo-pronombre {
+    width: 16vw;      /* Siempre el 20% de la pantalla */
+    height: 16vw; 
+    background-color: #FFFAE5;
+    border: 8px solid #786951;
+}
+
+.separacion-circulos {
+    gap: 10rem 
+}
+
+/*LANDING PAGE*/
+
 .LandingPage{
-        margin: 0;
+    
+    margin: 0;
     padding: 0;
 }
 #acrinder{
@@ -53,8 +73,11 @@
     background-color: #7CC9C3;
     padding: 2%;
 }
+
+/*footer*/
 .Landing-footer{
-     background-color: #FFFAE5;
+    
+    background-color: #FFFAE5;
     height: 120px;
 
     display: flex;

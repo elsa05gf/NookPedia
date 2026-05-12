@@ -22,19 +22,93 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 </head>
 <body class="SeleccionarPerfil">
-<div class="container d-flex justify-content-center">
+    <header>
+        <nav class="landing-navbar">
+
+        <!-- MENÚ ESCRITORIO -->
+        <div class="desktop-menu d-none d-lg-flex">
+
+            <div class="menu-box">
+                <a href="index.html#acrinder" class="landing-link">
+
+                    <img src="../imagenes/Logo_Api_Marrón.webp"
+                         alt="Logo"
+                         class="logo-leaf">
+
+                    <span>ACRINDER</span>
+
+                </a>
+            </div>
+
+            <div class="menu-box">
+                <a href="index.html#about" class="landing-link">
+                    ABOUT
+                </a>
+            </div>
+
+            <div class="menu-box">
+                <a href="index.html#location" class="landing-link">
+                    LOCATION
+                </a>
+            </div>
+
+            <div class="menu-box">
+                <a href="index.html#date" class="landing-link">
+                    MATCH
+                </a>
+            </div>
+
+        </div>
+
+        <!-- BOTÓN MÓVIL -->
+        <button class="mobile-menu-btn d-lg-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mobileMenu">
+
+            <img src="../imagenes/Logo_Api_Marrón.webp"
+                 alt="Logo"
+                 class="logo-leaf">
+        </button>
+
+        <!-- MENÚ MÓVIL -->
+        <div class="collapse mobile-menu" id="mobileMenu">
+
+            <a href="index.html#acrinder" class="landing-link">
+                ACRINDER
+            </a>
+            <a href="index.html#about" class="landing-link">
+                ABOUT
+            </a>
+            <a href="index.html#location" class="landing-link">
+                LOCATION
+            </a>
+            <a href="index.html#date" class="landing-link">
+                MATCH
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    </header>
+
+   <main class="d-flex flex-column justify-content-center align-items-center">
 
     <div class="caja-bootstrap text-center">
-
-        <p>
-            Before picking your future soulmate, we need you to fill your profile.
-        </p>
-
-        <p>
-            What are your pronouns?
-        </p>
-
+        <p class="mb-2">Before picking your future soulmate, we need you to fill your profile.</p>
+        <p class="mb-4">What are your pronouns?</p>
     </div>
 
-</div>
+    <!-- TRES CÍRCULOS CENTRADOS FUERA DEL CUADRADO -->
+    <div class="d-flex justify-content-center align-items-center flex-wrap separacion-circulos">
+        <div class="rounded-circle circulo-pronombre"></div>
+        <div class="rounded-circle circulo-pronombre"></div>
+        <div class="rounded-circle circulo-pronombre"></div>
+    </div>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

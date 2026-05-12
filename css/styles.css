@@ -424,7 +424,7 @@ button {
     font-size: 1.35rem;
     font-weight: 800;
     line-height: 1.6;
-    color: var(--ac-brown)
+    color: var(--ac-brown);
     padding: 10px;
 }
 

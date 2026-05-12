@@ -7,3 +7,9 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     }
   });
 });
+// script.js (vacío por ahora, solo dejo smooth scroll si lo necesitas)
+document.addEventListener('DOMContentLoaded', ()=> {
+  // ejemplo: si quieres que al hacer click en logo vuelva arriba
+  const logo = document.querySelector('.logo-leaf');
+  if (logo) logo.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+});

@@ -9,50 +9,35 @@
     <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Tu CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-
-    <div class="container-fluid vh-100 d-flex flex-column justify-content-center align-items-center p-3">
+<main id="game-container">
         
-        <!-- Header con logo y título -->
-        <div class="text-center mb-4">
-            <h1 class="display-5 fw-bold text-white mb-2">
-                <i class="fas fa-paw text-success"></i> Aldeanimals 
-                <i class="fas fa-heart text-danger"></i>
-            </h1>
-            <p class="text-white-50">Encuentra a tu compañero perfecto en la isla</p>
+        <div id="bg-top" class="bg-presentation">
+            <h1>ACRINDER</h1>
+            <img src="../imagenes/Logo_Api_MarrÃ³n.webp" alt="" class="logo-img">
         </div>
+        <div id="bg-bottom" class="wood-floor"></div>
 
-        <!-- Botón Start -->
-        <button id="startBtn" class="btn btn-start btn-lg mb-4 px-5 py-3 fw-bold shadow">
-            <i class="fas fa-play me-2"></i>Comenzar búsqueda
-        </button>
+        <div id="cardsContainer">
+            </div>
 
-        <!-- Contenedor de las tarjetas -->
-        <div class="position-relative" id="cardsContainer" style="width: 340px; height: 520px;">
-            <!-- Las tarjetas se insertarán dinámicamente aquí -->
-        </div>
-
-        <!-- Botones de acción -->
-        <div class="mt-4 d-flex gap-4">
-            <button id="noBtn" class="btn btn-no rounded-circle p-3 shadow">
-                <i class="fas fa-times fa-2x"></i>
+        <div class="controls-container">
+            <button id="noBtn" class="ac-btn ac-btn-no">
+                <i class="fas fa-times"></i>
             </button>
-            <button id="matchBtn" class="btn btn-match rounded-circle p-3 shadow">
-                <i class="fas fa-heart fa-2x"></i>
+            <button id="matchBtn" class="ac-btn ac-btn-yes">
+                <i class="fas fa-heart"></i>
             </button>
         </div>
-        
-        <small class="text-white-50 mt-3">
-            <i class="fas fa-arrow-left me-2"></i>Desliza izquierda para RECHAZAR 
-            <i class="fas fa-arrow-right ms-3 me-2"></i>Desliza derecha para ACEPTAR
-        </small>
-    </div>
+
+    </main>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
-    <script src="demo.js"></script>
+    <script src="../js/cards.js"></script>
+    
 </body>
 </html>

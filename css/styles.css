@@ -14,9 +14,8 @@
 }
 
 .logo-img {
-    width: 60px; 
+    width: 60px;    
     height: auto;
-    display: flex;
 }
 
 .logo-title {
@@ -24,7 +23,7 @@
     font-size: 3.5rem;
     color: var(--ac-cream);
     letter-spacing: 2px;
-    font-weight: 700;
+    font-weight: bolder;
 }
 
 .btn-acrinder {

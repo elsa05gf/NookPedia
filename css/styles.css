@@ -85,4 +85,117 @@ button {
         #D49F6A 27px
     );
 }
+/* CONTENEDOR TARJETAS */
+#cardsContainer {
+    position: relative;
+    width: 320px;
+    height: 200px;
+    z-index: 10;
+    margin-top: -10vh; /* Sube la tarjeta para cuadrar con la madera */
+}
+
+/* TARJETA ANIMAL CROSSING */
+.card-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--ac-cream);
+    border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    cursor: grab;
+}
+.card-item:active { cursor: grabbing; }
+
+/* Texto Izquierda */
+.card-info {
+    width: 60%;
+    z-index: 5;
+}
+
+.card-name {
+    font-family: 'Zilla Slab', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #7A6C5D;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+.card-quote-box {
+    background-color: #E6DCB8;
+    border: 1px solid #7A6C5D;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 0.65rem;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.card-cta {
+    font-size: 0.85rem;
+    color: #7A6C5D;
+    text-align: center;
+    margin: 0;
+    line-height: 1.2;
+}
+/* Imagen Derecha Sobresaliente */
+.card-img-container {
+    position: absolute;
+    right: -30px;
+    bottom: -10px;
+    width: 160px;
+    height: 220px; /* Más alto que la tarjeta para que sobresalga */
+    z-index: 6;
+    pointer-events: none; /* Que no interrumpa el drag */
+}
+
+.card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0px 8px 10px rgba(0,0,0,0.25));
+}
+
+/* BOTONES DE ACCIÓN */
+.controls-container {
+    position: absolute;
+    bottom: 8%;
+    display: flex;
+    gap: 50px;
+    z-index: 20;
+}
+
+.ac-btn {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 5px solid #F6F1D9;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    transition: transform 0.1s;
+}
+
+.ac-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.ac-btn-no {
+    background-color: #F8E255;
+    color: #FF5A5A;
+}
+
+.ac-btn-yes {
+    background-color: #5ED1A3;
+    color: #F6F1D9;
+}
 /* DEMOCARDS STYLE  FINAL */

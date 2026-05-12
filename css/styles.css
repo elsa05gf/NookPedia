@@ -3,6 +3,10 @@
     --ac-brown: #5A4E42;
     --ac-pink-light: #FFC0CB;
     --ac-pink-dark: #F57597;
+    --ac-mint-blue: #7CC9C3;
+    --ac-green: #A4D4A2;
+    --ac-yellow: #F7D359;
+    --ac-red: #FF7C68;
 }
 
 /* --- ESTILOS DE LA PANTALLA DE INICIO --- */
@@ -71,8 +75,8 @@ button {
     z-index: 1;
 }
 .bg-presentation { background-color: #F6F1D9; } /* Color crema inicial */
-.bg-reject { background-color: #FA8A75; }       /* Color rojo al rechazar */
-.bg-accept { background-color: #93D3B6; }       /* Color verde al aceptar */
+.bg-reject { background: linear-gradient(90deg, var(--ac-yellow) 0%, var(--ac-red) 100%); }       /* Color rojo al rechazar */
+.bg-accept { background: linear-gradient(90deg, var(--ac-green) 0%, var(--ac-mint-blue) 100%); }       /* Color verde al aceptar */
 
 #bg-bottom {
     position: absolute;
@@ -202,7 +206,7 @@ button {
 }
 
 .ac-btn-yes {
-    background-color: #5ED1A3;
+    background: var(--ac-green);
     color: #F6F1D9;
 }
 

@@ -1,0 +1,149 @@
+/* Reset y tipografías */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #fff;
+  color: #786951; /* color marrón oscuro para texto principal */
+  scroll-behavior: smooth; /* scroll suave por defecto */
+}
+h1, h2 {
+  font-family: 'Epunda Slab', serif;
+  text-transform: uppercase;
+}
+
+/* Navegación fija */
+nav {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  background-color: #fff9e5; /* crema */
+  border-bottom: 2px solid #786951; /* línea marrón */
+  z-index: 100;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding: 10px 20px;
+}
+nav li {
+  margin-right: 20px;
+}
+nav a {
+  text-decoration: none;
+  color: #786951;
+  font-family: 'Epunda Slab', serif;
+  font-size: 1rem;
+}
+nav a.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Slide 1 (Home) */
+#home {
+  min-height: 100vh; /* ocupa toda la pantalla */
+  padding-top: 60px; /* espacio para la nav fija */
+  background: linear-gradient(135deg, #febdc3, #ef758a);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#home h1 {
+  font-size: 4rem;
+  color: #fff9e5; /* título en crema sobre fondo rosa */
+  margin-bottom: 20px;
+}
+.speech {
+  max-width: 80%;
+  background-color: #f8eebc; /* amarillo suave */
+  color: #786951;
+  padding: 15px 20px;
+  border-radius: 8px;
+  position: relative;
+  font-size: 1.1rem;
+  display: inline-block;
+}
+/* Flecha del speech bubble */
+.speech::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 15px 15px 0;
+  border-style: solid;
+  border-color: #f8eebc transparent transparent transparent;
+}
+
+/* Líneas divisorias de sección */
+.top-line, .bottom-line {
+  width: 100%;
+  height: 5px;
+  background-color: #febdc3; /* rosa claro */
+}
+.bottom-line {
+  background-color: #ff7c69; /* rosa más intenso */
+}
+
+/* Slide 2 (About) */
+#about {
+  background-color: #fff9e5; /* crema */
+  padding: 80px 20px 60px;
+  text-align: center;
+}
+#about h2 {
+  font-size: 2.5rem;
+  color: #786951;
+  margin-bottom: 30px;
+}
+#about h2 .heart {
+  color: #ef758a; /* corazones rosa */
+  font-size: 1.5rem;
+  margin: 0 10px;
+}
+
+/* Contenedor flex para texto e imagen */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* se ajusta en móviles */
+}
+.about-text {
+  border: 2px solid #786951;
+  padding: 20px;
+  background-color: #fff9e5;
+  flex: 1 1 300px;
+  margin: 10px;
+  text-align: left;
+}
+.about-text p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+.about-text .swipping {
+  font-weight: bold;
+}
+.about-image {
+  flex: 1 1 300px;
+  margin: 10px;
+  text-align: center;
+}
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+  .about-text, .about-image {
+    margin: 10px auto;
+  }
+}

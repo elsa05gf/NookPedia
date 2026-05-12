@@ -17,8 +17,8 @@
 
 }
 
-.logo-img {
-    width: 100px;    
+.logo-img-big {
+    width: 60px;    
     height: auto;
 }
 
@@ -56,6 +56,14 @@ button {
 /* Fin de la Pantalla de Inicio */
 
 /* DEMOCARDS STYLE  INICIO */
+
+
+.logo-img-small {
+    width: 60px;    
+    height: auto;
+    margin: 2rem;
+
+}
 
 #game-container {
     position: relative;
@@ -100,8 +108,8 @@ button {
 /* CONTENEDOR TARJETAS */
 #cardsContainer {
     position: relative;
-    width: 320px;
-    height: 200px;
+    width: 750px;
+    height: 510px;
     z-index: 10;
     margin-top: -10vh; /* Sube la tarjeta para cuadrar con la madera */
 }
@@ -128,12 +136,12 @@ button {
 }
 
 .card-name {
-    font-family: 'Zilla Slab', serif;
-    font-size: 2.2rem;
-    font-weight: 700;
+    font-family: 'Nunito', extra-bold, serif;
+    font-size: 4.2rem;
+    font-weight: 900;
     color: #7A6C5D;
     margin-bottom: 5px;
-    line-height: 1;
+    line-height: 4;
 }
 
 .card-quote-box {

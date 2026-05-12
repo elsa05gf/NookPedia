@@ -20,7 +20,42 @@
 
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+      <!-- Animaciones -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </head>
 <body>
 
+  <div class="container-fluid vh-100 d-flex justify-content-center align-items-center">
+
+    <div class="card-container">
+
+      <!-- CARD -->
+      <div class="tinder-card" id="card">
+
+        <img
+          src="https://picsum.photos/400/500"
+          class="card-img-top"
+          alt="Imagen"
+        />
+
+        <div class="card-body text-center">
+          <h3 class="card-title">Película 1</h3>
+          <p class="card-text">
+            Desliza izquierda para NO o derecha para MATCH
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+  <!-- JS -->
+  <script src="demo.js"></script>
+
 </body>
+</html>

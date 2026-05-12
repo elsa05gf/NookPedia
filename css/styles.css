@@ -46,7 +46,11 @@
 button {
     font-family: inherit;
 }
+
+/* Fin de la Pantalla de Inicio */
+
 /* DEMOCARDS STYLE  INICIO */
+
 #game-container {
     position: relative;
     width: 100vw;
@@ -85,6 +89,8 @@ button {
         #D49F6A 27px
     );
 }
+
+
 /* CONTENEDOR TARJETAS */
 #cardsContainer {
     position: relative;
@@ -143,6 +149,7 @@ button {
     margin: 0;
     line-height: 1.2;
 }
+
 /* Imagen Derecha Sobresaliente */
 .card-img-container {
     position: absolute;
@@ -198,4 +205,5 @@ button {
     background-color: #5ED1A3;
     color: #F6F1D9;
 }
+
 /* DEMOCARDS STYLE  FINAL */

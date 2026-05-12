@@ -40,14 +40,19 @@
 
 /*Círculos de Pronombres*/
 .circulo-pronombre {
-    width: 16vw;      /* Siempre el 20% de la pantalla */
-    height: 16vw; 
+    width: clamp(100px, 30vw, 350px);
+    height: clamp(100px, 30vw, 350px);
     background-color: #FFFAE5;
     border: 8px solid #786951;
 }
 
 .separacion-circulos {
     gap: 10rem 
+}
+
+/* Contenedor de cada círculo con su imagen */
+.contenedor-circulo {
+    width: min(300px, 45vw);
 }
 
 /*LANDING PAGE*/

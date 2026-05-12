@@ -18,19 +18,21 @@
 }
 
 .logo-img {
-    width: 60px;    
+    width: 100px;    
     height: auto;
 }
 
 .logo-title {
-    font-family: 'Zilla Slab', serif; 
-    font-size: 3.5rem;
+    font-family: 'Epunda Slab', serif; 
+    font-size: 4.5rem;
     color: var(--ac-cream);
     letter-spacing: 2px;
     font-weight: bolder;
+    
 }
 
 .btn-acrinder {
+    font-family: 'Nunito', serif; 
     background-color: var(--ac-cream);
     color: var(--ac-brown);
     border: none;
@@ -41,14 +43,14 @@
     width: 280px;
     
     /* Sombra para el efecto de botón 3D tipo juego */
-    box-shadow: 0px 6px 0px #D8CBAE, 0px 10px 15px rgba(0,0,0,0.15);
+    box-shadow: 0px 6px 0px #F8EEBB, 0px 10px 15px rgba(0,0,0,0.15);
     cursor: pointer;
     outline: none;
 }
 
 /* Ocultar el botón original predeterminado si es necesario */
 button {
-    font-family: inherit;
+    font-family: nunito, sans-serif;
 }
 
 /* Fin de la Pantalla de Inicio */

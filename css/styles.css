@@ -145,7 +145,7 @@
 
     margin: 0 2rem;
 
-    min-height: 45vh;
+    min-height: 40vh;
 
     display: flex;
     align-items: center;
@@ -172,6 +172,20 @@
     align-items: center;
 
     transition: transform 0.3s ease;
+}
+
+.etiqueta {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: #786951;
+}
+
+.input-personalizado {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: #786951;
+    max-width: 300px;  /* ← Añade esto */
+    width: 100%;       /* ← Que sea responsive pero con tope */
 }
 
 /*LANDING PAGE*/

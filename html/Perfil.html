@@ -92,73 +92,65 @@
     </header>
     <main class="main-perfil">
 
-        <!-- Contenido superior -->
-        <div class="container">
+        <div class="container-fluid px-4 px-lg-5">
             <div class="row align-items-start">
 
-                <!-- Columna izquierda: Círculo + Enter your name -->
+                <!-- COLUMNA IZQUIERDA -->
                 <div class="col-12 col-lg-6">
+                    <div class="d-flex flex-column mx-auto mx-lg-0 mt-5 text-center text-lg-start"
+                        style="max-width: 400px;">
 
-                    <!-- Círculo del pronombre -->
-                    <div id="contenedor-pronombre" class="mb-4 d-flex justify-content-center justify-content-lg-start">
-                        <!-- Aquí se genera el círculo dinámicamente -->
+                        <!-- Círculo del pronombre -->
+                        <div id="contenedor-pronombre"
+                            class="mb-4 d-inline-block align-self-center align-self-lg-start">
+                            <!-- Aquí se genera el círculo dinámicamente -->
+                        </div>
+
+                        <!-- Enter your name + input -->
+                        <div class="w-100">
+                            <label class="form-label etiqueta">Enter your name</label>
+                            <input type="text" class="form-control input-personalizado w-100 mx-auto mx-lg-0"
+                                placeholder="Your name" style="max-width: 300px;">
+                        </div>
+
                     </div>
-
-                    <!-- Enter your name -->
-                    <div>
-                        <label class="form-label etiqueta">Enter your name</label>
-                        <input type="text" class="form-control input-personalizado" placeholder="Your name"
-                            style="max-width: 300px;">
-                    </div>
-
                 </div>
 
-                <!-- Columna derecha: START DATING + I am searching for -->
+                <!-- COLUMNA DERECHA -->
                 <div class="col-12 col-lg-6">
-
-                    <!-- START DATING !! -->
                     <div class="mb-4">
                         <h2 class="titulo-start">START DATING !!</h2>
                     </div>
-
-                    <!-- I am searching for ... -->
                     <div>
                         <p class="etiqueta mb-3">I am searching for ...</p>
                     </div>
-
                 </div>
 
             </div>
         </div>
 
+        <!-- BOTONES INFERIORES -->
         <div class="rectangulo-botones mx-3 mx-md-4 mx-lg-5">
             <div class="container">
                 <div class="row justify-content-center g-5">
-
-                    <div class="col-6 col-md-4 col-lg-4"> <!-- Cambiado: lg-3 → lg-4 -->
+                    <div class="col-6 col-md-4 col-lg-4">
                         <div class="eleccion-acrinder text-center p-3">Friendship</div>
                     </div>
-
-                    <div class="col-6 col-md-4 col-lg-4"> <!-- Cambiado: lg-3 → lg-4 -->
+                    <div class="col-6 col-md-4 col-lg-4">
                         <div class="eleccion-acrinder text-center p-3">Relationship</div>
                     </div>
-
-                    <div class="col-6 col-md-4 col-lg-4"> <!-- Cambiado: lg-3 → lg-4 -->
+                    <div class="col-6 col-md-4 col-lg-4">
                         <div class="eleccion-acrinder text-center p-3">Casual</div>
                     </div>
-
-                    <div class="col-6 col-md-4 col-lg-4"> <!-- Cambiado: lg-3 → lg-4 -->
+                    <div class="col-6 col-md-4 col-lg-4">
                         <div class="eleccion-acrinder text-center p-3">Trade</div>
                     </div>
-
-                    <div class="col-6 col-md-4 col-lg-4"> <!-- Cambiado: lg-3 → lg-4 -->
+                    <div class="col-6 col-md-4 col-lg-4">
                         <div class="eleccion-acrinder text-center p-3">Explore</div>
                     </div>
-
-                    <div class="col-6 col-md-4 col-lg-4"> <!-- Cambiado: lg-3 → lg-4 -->
+                    <div class="col-6 col-md-4 col-lg-4">
                         <div class="eleccion-acrinder text-center p-3">I don't know ...</div>
                     </div>
-
                 </div>
             </div>
         </div>

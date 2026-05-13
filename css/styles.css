@@ -139,21 +139,15 @@
 .rectangulo-botones {
 
     background-color: #FFFAE5;
-
     border: 0.5rem solid #786951;
     border-radius: 2rem 2rem 0 0;
-
     border-bottom: none;
-
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-
     margin: 0 2rem;
-
     min-height: 40vh;
-
     display: flex;
     align-items: center;
 }
@@ -161,24 +155,19 @@
 .eleccion-acrinder {
 
     background-color: #786951;
-
     color: #FFFAE5;
-
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     font-size: clamp(1rem, 2vw, 1.7rem);
-
     min-height: 100px;
-
     width: 100%;
-
     border-radius: 3rem;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     transition: transform 0.3s ease;
+    /* Sombra */
+    box-shadow: 0 8px 8px #66563d73;  /* ← Añade esta línea */
 }
 
 .etiqueta {

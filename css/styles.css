@@ -344,7 +344,8 @@
 
     border-bottom: 10px solid #786951;
 
-    position: relative;
+    position: fixed;
+    width: 100%;
 }
 
 /* MENÚ ESCRITORIO */

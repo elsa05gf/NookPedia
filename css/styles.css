@@ -1,11 +1,13 @@
 /*SELECCIONAR PERFIL*/
 
-.SeleccionarPerfil{
+.SeleccionarPerfil {
 
     margin: 0;
     padding: 0;
-    min-height: 100vh;  /* Cambia height por min-height */
-    overflow-y: auto;   /* Permite scroll vertical si es necesario */
+    min-height: 100vh;
+    /* Cambia height por min-height */
+    overflow-y: auto;
+    /* Permite scroll vertical si es necesario */
 
     background: linear-gradient(to right, #FEBDC3, #EF758A);
 
@@ -13,7 +15,7 @@
 }
 
 /*CajaInformativa*/
-.caja-bootstrap{
+.caja-bootstrap {
 
     width: clamp(200px, 90%, 1200px);
 
@@ -26,12 +28,12 @@
     padding: 4vh 4vw;
 }
 
-.caja-bootstrap p{
-    
+.caja-bootstrap p {
+
     color: #786951;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
-    font-size: clamp(0.35rem, 3vw, 2rem); 
+    font-size: clamp(0.35rem, 3vw, 2rem);
 }
 
 /* hover caja informativa */
@@ -55,7 +57,7 @@
 /* Imagen dentro del círculo */
 .circulo-pronombre img {
     object-fit: cover;
-    object-position: center 0%;  
+    object-position: center 0%;
     width: 100%;
     height: 100%;
 }
@@ -77,11 +79,11 @@
 }
 
 .texto-pronombre {
-    
+
     color: #786951;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
-    font-size: clamp(0.8rem, 4vw, 2rem); 
+    font-size: clamp(0.8rem, 4vw, 2rem);
 }
 
 /* hover texto de pronombres */
@@ -90,17 +92,21 @@
 }
 
 .texto-pronombre:hover {
-    color: #EF758A;  /* Un color más vibrante */
+    color: #EF758A;
+    /* Un color más vibrante */
 }
 
 /* Animación de latido - cuadros de texto */
 
 @keyframes latido {
-    0%, 100% { 
+
+    0%,
+    100% {
         transform: scale(1);
         filter: drop-shadow(0 0 0px #680b496e);
     }
-    50% { 
+
+    50% {
         transform: scale(1.03);
         filter: drop-shadow(0 0 12px rgba(136, 49, 107, 0.349));
     }
@@ -120,13 +126,14 @@
 
 /*PERFIL*/
 
-.Perfil{
+.Perfil {
 
-    height: 100vh;  
-    overflow: hidden;        
+    height: 100vh;
+    overflow: hidden;
     background: linear-gradient(to right, #FEBDC3, #EF758A);
     display: flex;
-    flex-direction: column;  /* ← ESTO ES CLAVE */
+    flex-direction: column;
+    /* ← ESTO ES CLAVE */
 }
 
 .rectangulo-botones {
@@ -184,37 +191,70 @@
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     color: #786951;
-    max-width: 300px;  /* ← Añade esto */
-    width: 100%;       /* ← Que sea responsive pero con tope */
+    max-width: 300px;
+    /* ← Añade esto */
+    width: 100%;
+    /* ← Que sea responsive pero con tope */
+}
+
+/* Título START DATING */
+.titulo-start {
+    color: #FFFAE5;
+    font-size: clamp(1rem, 5vw, 5rem);
+    font-weight: bold;
+    text-shadow: 
+        -2px -2px 0 #ff8fa3,
+        2px -2px 0 #ff8fa3,
+        -2px 2px 0 #ff8fa3,
+        2px 2px 0 #ff8fa3;
+    font-family: "Epunda Slab", serif;
+}
+
+/* Controla el tamaño del bloque START DATING */
+.posicion-start-dating {
+    margin-top: 3rem;  /* Margen para móviles */
+    max-width: clamp(280px, 50vw, 700px);  /* Mínimo 280px, máximo 700px */
+    width: 100%;
+}
+
+/* En escritorio (992px en adelante) - con margen */
+@media (min-width: 992px) {
+    .posicion-start-dating {
+        margin-top: 7.5rem;  /* El margen que necesita en escritorio */
+    }
 }
 
 /*LANDING PAGE*/
 
-.LandingPage{
-    
+.LandingPage {
+
     margin: 0;
     padding: 0;
 }
-#acrinder{
+
+#acrinder {
     background: linear-gradient(to right, #FEBDC3, #EF758A);
     padding: 2%;
 }
-#date{
+
+#date {
     background: linear-gradient(to right, #FEBDC3, #EF758A);
     padding: 2%;
 }
-#about{
+
+#about {
     background-color: #FFFAE5;
     padding: 2%;
 }
-#location{
+
+#location {
     background-color: #7CC9C3;
     padding: 2%;
 }
 
 /*footer*/
-.Landing-footer{
-    
+.Landing-footer {
+
     background-color: #FFFAE5;
     height: 120px;
 
@@ -224,7 +264,8 @@
 
     position: relative;
 }
-.footer-top{
+
+.footer-top {
     width: 100%;
     height: 10px;
 
@@ -235,7 +276,7 @@
     left: 0;
 }
 
-.Landing-footer p{
+.Landing-footer p {
     margin: 0;
 
     font-family: "Nunito", sans-serif;
@@ -246,7 +287,7 @@
 }
 
 /*menu*/
-.landing-navbar{
+.landing-navbar {
     background-color: #FFFAE5;
 
     border-bottom: 10px solid #786951;
@@ -256,7 +297,7 @@
 
 /* MENÚ ESCRITORIO */
 
-.desktop-menu{
+.desktop-menu {
     display: flex;
 
     width: 100%;
@@ -264,7 +305,7 @@
 
 /* CAJAS */
 
-.menu-box{
+.menu-box {
     width: 25%;
     height: 90px;
 
@@ -275,7 +316,7 @@
 
 /* LINKS */
 
-.landing-link{
+.landing-link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -295,20 +336,20 @@
 
 /* LOGO */
 
-.logo-leaf{
+.logo-leaf {
     width: 45px;
     height: auto;
 }
 
 /* HOVER */
 
-.landing-link:hover{
+.landing-link:hover {
     opacity: 0.7;
 }
 
 /* BOTÓN MÓVIL */
 
-.mobile-menu-btn{
+.mobile-menu-btn {
     background: none;
     border: none;
 
@@ -317,7 +358,7 @@
 
 /* MENÚ MÓVIL */
 
-.mobile-menu{
+.mobile-menu {
     position: absolute;
 
     top: 100%;
@@ -334,7 +375,7 @@
 
 /* LINKS MÓVIL */
 
-.mobile-link{
+.mobile-link {
     display: flex;
     align-items: center;
 
@@ -350,14 +391,14 @@
 
     color: #786951;
 
-    border-top: 1px solid rgba(120,105,81,0.2);
+    border-top: 1px solid rgba(120, 105, 81, 0.2);
 }
 
 /* RESPONSIVE */
 
-@media (max-width: 991px){
+@media (max-width: 991px) {
 
-    .landing-navbar{
+    .landing-navbar {
         min-height: 85px;
     }
 }

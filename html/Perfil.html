@@ -90,42 +90,49 @@
         </nav>
 
     </header>
-    <main class="main-perfil">
+    <main class="d-flex flex-column min-vh-100">
 
-        <div class="container-fluid px-4 px-lg-5">
-            <div class="row align-items-start">
+        <!-- Contenido superior que ocupa todo el espacio disponible -->
+        <div class="contenido-superior">
+            <div class="container-fluid px-4 px-lg-5">
+                <div class="row align-items-start">
 
-                <!-- COLUMNA IZQUIERDA -->
-                <div class="col-12 col-lg-6">
-                    <div class="d-flex flex-column mx-auto mx-lg-0 mt-5 text-center text-lg-start"
-                        style="max-width: 400px;">
+                    <!-- COLUMNA IZQUIERDA -->
+                    <div class="col-12 col-lg-6">
+                        <div class="d-flex flex-column mx-auto mx-lg-0 mt-5 text-center text-lg-start">
 
-                        <!-- Círculo del pronombre -->
-                        <div id="contenedor-pronombre"
-                            class="mb-4 d-inline-block align-self-center align-self-lg-start">
-                            <!-- Aquí se genera el círculo dinámicamente -->
+                            <!-- Círculo del pronombre -->
+                            <div id="contenedor-pronombre"
+                                class="mb-4 d-inline-block align-self-center align-self-lg-start">
+                                <!-- Aquí se genera el círculo dinámicamente -->
+                            </div>
+
+                            <!-- Enter your name + input -->
+                            <div class="w-100">
+                                <label class="form-label etiqueta">Enter your name</label>
+                                <input type="text" class="form-control input-personalizado w-100 mx-auto mx-lg-0"
+                                    placeholder="Your name" style="max-width: 300px;">
+                            </div>
+
                         </div>
+                    </div>
 
-                        <!-- Enter your name + input -->
-                        <div class="w-100">
-                            <label class="form-label etiqueta">Enter your name</label>
-                            <input type="text" class="form-control input-personalizado w-100 mx-auto mx-lg-0"
-                                placeholder="Your name" style="max-width: 300px;">
-                        </div>
+                    <!-- COLUMNA DERECHA -->
+                    <div class="col-12 col-lg-6">
+
+                        <!-- Bloque START DATING (imagen + texto superpuesto) - Clickable -->
+                        <a href="demoInicio.html" class="text-decoration-none d-block contenedor-start-dating">
+                            <div class="position-relative mx-auto mx-lg-0 posicion-start-dating">
+                                <img src="../imagenes/CuadroTextoRosa.webp" alt="START DATING" class="w-100">
+                                <div class="position-absolute top-50 start-50 translate-middle text-nowrap">
+                                    <h2 class="titulo-start mb-0">START DATING !!</h2>
+                                </div>
+                            </div>
+                        </a>
 
                     </div>
+
                 </div>
-
-                <!-- COLUMNA DERECHA -->
-                <div class="col-12 col-lg-6">
-                    <div class="mb-4">
-                        <h2 class="titulo-start">START DATING !!</h2>
-                    </div>
-                    <div>
-                        <p class="etiqueta mb-3">I am searching for ...</p>
-                    </div>
-                </div>
-
             </div>
         </div>
 

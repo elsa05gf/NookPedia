@@ -14,11 +14,7 @@
 
 /*CajaInformativa*/
 .caja-bootstrap{
-
-    margin-top: 4%;        /* ← AÑADE: menos espacio arriba (antes no tenía) */
-   
-    margin-bottom: 3vh; 
-
+    
     width: 60%;
 
     background-color: #FFFAE5;
@@ -44,10 +40,6 @@
     height: clamp(100px, 30vw, 350px);
     background-color: #FFFAE5;
     border: 8px solid #786951;
-}
-
-.separacion-circulos {
-    gap: 10rem 
 }
 
 /* Imagen dentro del círculo */

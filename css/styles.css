@@ -137,40 +137,42 @@ button {
 
 .card-name {
     font-family: 'Nunito', extra-bold, serif;
-    font-size: 4.2rem;
-    font-weight: 900;
+    font-size: 5.2rem;
+    font-weight: 1000;
     color: #7A6C5D;
-    margin-bottom: 5px;
-    line-height: 4;
-}
-
-.card-quote-box {
-    background-color: #E6DCB8;
-    border: 1px solid #7A6C5D;
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 0.65rem;
-    color: #333;
-    font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 200px;
+    margin-left: 30px;
     line-height: 1.2;
 }
 
+.card-quote-box {
+    background-color: #F8EEBB;
+    border: 3px solid #786A50;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 150px;
+    margin-left: 30px;
+    margin-top: -120px;
+}
+
 .card-cta {
-    font-size: 0.85rem;
+    font-size: 2.85rem;
     color: #7A6C5D;
     text-align: center;
-    margin: 0;
+    margin-top: -120px;
     line-height: 1.2;
 }
 
 /* Imagen Derecha Sobresaliente */
 .card-img-container {
     position: absolute;
-    right: -30px;
-    bottom: -10px;
-    width: 160px;
-    height: 220px; /* Más alto que la tarjeta para que sobresalga */
+    right: 50px;
+    bottom: 70px;
+    width: 200px;
+    height: 360px; /* Más alto que la tarjeta para que sobresalga */
     z-index: 6;
     pointer-events: none; /* Que no interrumpa el drag */
 }
@@ -192,10 +194,10 @@ button {
 }
 
 .ac-btn {
-    width: 65px;
-    height: 65px;
+    width: 125px;
+    height: 125px;
     border-radius: 50%;
-    border: 5px solid #F6F1D9;
+    border: 5px solid #F5C24C;
     font-size: 1.8rem;
     cursor: pointer;
     display: flex;
@@ -207,7 +209,7 @@ button {
 
 .ac-btn:active {
     transform: translateY(4px);
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 2px rgba(185, 26, 26, 0.2);
 }
 
 .ac-btn-no {
@@ -237,7 +239,8 @@ button {
 /* --- TARJETA IZQUIERDA --- */
 .left-card {
     background-color: var(--ac-cream);
-    border: 5px solid #66A3D2; /* Borde azul de tu imagen */
+    width: 700px;
+    height: 500px;
     border-radius: 15px;
     box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
 }
@@ -262,25 +265,32 @@ button {
 }
 
 .villager-portrait {
-    height: 110%; /* Para que sobresalga un pelín por arriba o se vea grande */
+    height: 130%;
+    width: 100%;
+    position: relative;
+    top: 118px; 
     object-fit: contain;
     filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.2));
+    mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 70%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 70%, transparent 100%);
 }
 
 /* Botón DATE */
 .btn-date {
     background-color: #FFB3CA;
-    border: 4px solid #FF8EAB;
-    border-radius: 50px;
+    border: 4px solid #FF8EAB;  
+    font-family: 'Epunda Slab', serif;
+    border-radius: 30px;
     color: white;
-    font-size: 2.5rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    padding: 10px 0;
-    text-shadow: 1px 1px 0px #FF8EAB, -1px -1px 0px #FF8EAB, 1px -1px 0px #FF8EAB, -1px 1px 0px #FF8EAB; /* Borde de texto */
+    font-size: 3.5rem;   
+    font-weight: 700;
+    letter-spacing: 6.5px;  
+    padding: 0px 20px;   
+    text-shadow: 3px 3px 0px #FF8EAB, -3px -3px 0px #FF8EAB, 3px -3px 0px #FF8EAB, -3px 3px 0px #FF8EAB;
     cursor: pointer;
-    box-shadow: 0px 5px 0px #FF8EAB;
+    box-shadow: 0px 4px 0px #FF8EAB; 
     transition: transform 0.1s, box-shadow 0.1s;
+    line-height: 1;
 }
 
 .btn-date:active {

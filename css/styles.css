@@ -14,7 +14,7 @@
 
 /*CajaInformativa*/
 .caja-bootstrap{
-    
+
     width: 60%;
 
     background-color: #FFFAE5;
@@ -31,7 +31,7 @@
     color: #786951;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: clamp(1rem, 5vw, 2rem); 
 }
 
 /*Círculos de Pronombres*/
@@ -60,7 +60,7 @@
     color: #786951;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 5vw, 2rem); 
 }
 
 /*SELECCIONAR PERFIL*/

@@ -141,18 +141,26 @@ body::before{
   .card-inner .tagline{ font-size:18px; }
   .hero-card{ padding:18px; border-radius:20px; }
 }
+.separador-rosa-fuerte,
+.separador-rosa-claro{
+  width: 100vw;
+  min-width: 100vw;
+  max-width: 100vw;
+  box-sizing: border-box;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
 .separador-rosa-fuerte{
-  width: 120%;
   height: 100px;
   background-color: #ef758a;
-  margin-top: 250px;   /* AJUSTA ESTE VALOR */
 }
 
 .separador-rosa-claro{
-  width: 120%;
   height: 50px;
   background-color: #febdc3;
-  margin-top: 0px;    /* AJUSTA ESTE VALOR */
 }
 
 
@@ -205,8 +213,8 @@ body::before{
     font-size: 18px;
 }
 .about-section{
-  background: #fff9e5;      /* tu crema de fondo */
-  padding: 80px 20px;
+  background: #fff9e5;
+  padding: 120px 20px;
   position: relative;
   z-index: 10;
   overflow: hidden;         
@@ -303,7 +311,7 @@ body::before{
   aspect-ratio: 3 / 4;          /* proporción vertical tipo personaje */
   border-radius: 18px;
   background: #fbeee0;          /* crema muy suave */
-  border: 3px solid #f5c24c;    /* toque amarillo de la paleta */
+  border: 3px solid #241a0300;    /* toque amarillo de la paleta */
   box-shadow: 0 10px 24px rgba(0,0,0,0.06);
 }
 

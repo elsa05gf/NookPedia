@@ -184,17 +184,8 @@
 .etiqueta {
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
+    font-size: clamp(1rem, 2vw, 1.5rem);
     color: #786951;
-}
-
-.input-personalizado {
-    font-family: 'Nunito', sans-serif;
-    font-weight: bold;
-    color: #786951;
-    max-width: 300px;
-    /* ← Añade esto */
-    width: 100%;
-    /* ← Que sea responsive pero con tope */
 }
 
 /* Título START DATING */
@@ -203,10 +194,10 @@
     font-size: clamp(1rem, 5vw, 5rem);
     font-weight: bold;
     text-shadow: 
-        -2px -2px 0 #ff8fa3,
-        2px -2px 0 #ff8fa3,
-        -2px 2px 0 #ff8fa3,
-        2px 2px 0 #ff8fa3;
+        -3px -3px 0 #ff8fa3,
+        3px -3px 0 #ff8fa3,
+        -3px 3px 0 #ff8fa3,
+        3px 3px 0 #ff8fa3;
     font-family: "Epunda Slab", serif;
 }
 
@@ -223,6 +214,25 @@
         margin-top: 7.5rem;  /* El margen que necesita en escritorio */
     }
 }
+
+.input-personalizado {
+    max-width: 300px;
+    font-family: 'Nunito', sans-serif !important;
+    color: #786951 !important;
+    font-weight: bold !important;
+    background-color: #FFFAE5 !important;
+    border: 0.3rem solid #786951 !important;
+    border-radius: 1rem !important;
+    transition: all 0.3s ease !important; 
+}
+
+.input-personalizado:focus {
+    border-color: #EF758A !important;  /* Borde rosa */
+    background-color: #FFFAE5 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px #EF758A !important;  /* Sombra rosa suave opcional */
+}
+
 
 /*LANDING PAGE*/
 

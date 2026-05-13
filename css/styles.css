@@ -71,6 +71,20 @@
     font-size: 1.5rem;
 }
 
+/*SELECCIONAR PERFIL*/
+
+.Perfil{
+
+    margin: 0;
+    padding: 0;
+    height: 100vh;           /* ← Cambia max-height por height */
+    overflow: hidden;        /* ← Evita el scroll en todo el body */
+
+    background: linear-gradient(to right, #FEBDC3, #EF758A);
+
+    font-family: 'Nunito', sans-serif;
+}
+
 /*LANDING PAGE*/
 
 .LandingPage{

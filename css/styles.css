@@ -34,6 +34,16 @@
     font-size: clamp(0.35rem, 3vw, 2rem); 
 }
 
+/* hover caja informativa */
+.caja-bootstrap {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caja-bootstrap:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px #680b496e;
+}
+
 /*Círculos de Pronombres*/
 .circulo-pronombre {
     width: clamp(90px, 20vw, 350px);
@@ -50,6 +60,17 @@
     height: 100%;
 }
 
+/* Hover círculos */
+.circulo-pronombre {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circulo-pronombre:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px #680b496e;
+    cursor: pointer;
+}
+
 /* Contenedor de cada círculo con su cuadro de texto */
 .contenedor-circulo {
     width: clamp(200px, 45vw, 450px);
@@ -61,6 +82,36 @@
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
     font-size: clamp(0.8rem, 4vw, 2rem); 
+}
+
+/* hover texto de pronombres */
+.texto-pronombre {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.texto-pronombre:hover {
+    color: #EF758A;  /* Un color más vibrante */
+}
+
+/* Animación de latido - cuadros de texto */
+
+@keyframes latido {
+    0%, 100% { 
+        transform: scale(1);
+        filter: drop-shadow(0 0 0px #680b496e);
+    }
+    50% { 
+        transform: scale(1.03);
+        filter: drop-shadow(0 0 12px rgba(136, 49, 107, 0.349));
+    }
+}
+
+.latido-normal {
+    animation: latido 2.5s ease-in-out infinite;
+}
+
+.latido-lento {
+    animation: latido 3.5s ease-in-out infinite;
 }
 
 /*SELECCIONAR PERFIL*/

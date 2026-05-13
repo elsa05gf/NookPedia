@@ -19,7 +19,7 @@
 
     background-color: #FFFAE5;
 
-    border: 0.5rem solid #786951;
+    border: clamp(4px, 2vw, 10px) solid #786951;
 
     border-radius: 2rem;
 
@@ -36,10 +36,10 @@
 
 /*Círculos de Pronombres*/
 .circulo-pronombre {
-    width: clamp(100px, 30vw, 350px);
-    height: clamp(100px, 30vw, 350px);
+    width: clamp(90px, 20vw, 350px);
+    height: clamp(90px, 20vw, 350px);
     background-color: #FFFAE5;
-    border: 8px solid #786951;
+    border: clamp(2px, 2vw, 10px) solid #786951;
 }
 
 /* Imagen dentro del círculo */
@@ -52,7 +52,7 @@
 
 /* Contenedor de cada círculo con su cuadro de texto */
 .contenedor-circulo {
-    width: clamp(200px, 60vw, 450px);
+    width: clamp(200px, 45vw, 450px);
 }
 
 .texto-pronombre {
@@ -60,7 +60,7 @@
     color: #786951;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
-    font-size: clamp(0.8rem, 4vw, 1.5rem); 
+    font-size: clamp(0.8rem, 4vw, 2rem); 
 }
 
 /*SELECCIONAR PERFIL*/

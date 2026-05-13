@@ -10,121 +10,94 @@
     padding: 2%;
 }
 #date{
-    /*background: linear-gradient(to right, #FEBDC3, #EF758A);
-    padding: 2%;
-    text-align: center;*/
     background: linear-gradient(to right, #FEBDC3, #EF758A);
-
-    padding: 5rem 2rem;
-
+    padding: 2%;
     text-align: center;
+
 }
-/*----------------CARRUSEL*------------------/
+/*---------------------------------CARRUSEL-------------------------------*/
 
-/* CONTENEDOR */
+.carousel-container{
+    width: 90%;
+    max-width: 1200px;
 
-.date-container{
-    max-width: 1400px;
-    margin: auto;
-}
+    margin:auto;
 
-/* TÍTULO */
+    background:#f7f1df;
 
-.date-title{
-    font-family: "Epunda Slab", serif;
-    font-size: 3rem;
-    color: #FFFAE5;
+    border-radius:25px;
 
-    margin-bottom: 3rem;
-}
+    position:relative;
 
-/* CAJA BLANCA DEL CARRUSEL */
+    overflow:hidden;
 
-#animalCarousel{
-    background-color: #FFFAE5;
-
-    border-radius: 30px;
-
-    padding: 2rem 1rem;
-
-    position: relative;
+    padding:20px 50px;
 }
 
-/* IMÁGENES */
+/* TRACK */
 
-.villager-img{
-    width: 100%;
-    max-width: 140px;
+.carousel-track{
+    display:flex;
+    gap:30px;
 
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
-/* EFECTO HOVER */
+/* CADA PERSONAJE */
 
-.villager-img:hover{
-    transform: scale(1.1);
+.character-card{
+    min-width:140px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-/* TEXTO */
+/* IMAGEN */
 
-.date-text{
-    margin-top: 2rem;
+.character-card img{
+    width:120px;
+    height:auto;
 
-    font-family: "Nunito", sans-serif;
-    font-size: 1.3rem;
-    font-weight: bold;
+    transition:0.3s;
+}
 
-    color: #FFFAE5;
+.character-card img:hover{
+    transform:scale(1.08);
 }
 
 /* FLECHAS */
 
-.carousel-control-prev,
-.carousel-control-next{
-    width: auto;
+.arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+
+    width:40px;
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#fff5dc;
+
+    cursor:pointer;
+
+    font-size:25px;
+
+    z-index:10;
 }
 
-/* IZQUIERDA */
-
-.carousel-control-prev{
-    left: -60px;
+.left{
+    left:5px;
 }
 
-/* DERECHA */
-
-.carousel-control-next{
-    right: -60px;
+.right{
+    right:5px;
 }
 
-/* ICONOS */
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon{
-    background-size: 100%;
-
-    width: 3rem;
-    height: 3rem;
-
-    filter: brightness(0) invert(1);
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 768px){
-
-    .date-title{
-        font-size: 2rem;
-    }
-
-    #animalCarousel{
-        padding: 2rem 1rem;
-    }
-
-    .villager-img{
-        max-width: 90px;
-    }
-}
-/*---------------------FIN CARRUSEL-----------------------*/
+/*---------------------------------FIN CARRUSEL----------------------------------*/
 
 
 #about{

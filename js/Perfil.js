@@ -55,4 +55,37 @@ document.addEventListener('DOMContentLoaded', function () {
         window.location.href = 'SeleccionarPerfil.html';
     }
 
+    // Seleccionar todos los botones del rectángulo
+    const botones = document.querySelectorAll('.eleccion-acrinder');
+
+    // Recorrer cada botón
+    botones.forEach(function (boton) {
+        boton.addEventListener('click', function () {
+            // Quitar la clase 'seleccionado' de todos los botones
+            botones.forEach(function (btn) {
+                btn.classList.remove('seleccionado');
+            });
+
+            // Añadir la clase 'seleccionado' al botón clickeado
+            this.classList.add('seleccionado');
+        });
+    });
+
+    // Guardar el nombre cuando el usuario escribe
+    const inputNombre = document.querySelector('.input-personalizado');
+
+    if (inputNombre) {
+        // Cargar el nombre guardado al cargar la página
+        const nombreGuardado = localStorage.getItem('nombreUsuario');
+        if (nombreGuardado) {
+            inputNombre.value = nombreGuardado;
+        }
+
+        // Guardar el nombre cada vez que el usuario escribe
+        inputNombre.addEventListener('input', function () {
+            localStorage.setItem('nombreUsuario', this.value);
+        });
+    }
+
 });
+

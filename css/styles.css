@@ -15,7 +15,7 @@
 /*CajaInformativa*/
 .caja-bootstrap{
 
-    width: 60%;
+    width: clamp(280px, 70%, 600px);
 
     background-color: #FFFAE5;
 
@@ -52,7 +52,7 @@
 
 /* Contenedor de cada círculo con su cuadro de texto */
 .contenedor-circulo {
-    width: min(300px, 45vw);
+    width: clamp(200px, 60vw, 450px);
 }
 
 .texto-pronombre {

@@ -4,8 +4,8 @@
 
     margin: 0;
     padding: 0;
-    height: 100vh;           /* ← Cambia max-height por height */
-    overflow: hidden;        /* ← Evita el scroll en todo el body */
+    min-height: 100vh;  /* Cambia height por min-height */
+    overflow-y: auto;   /* Permite scroll vertical si es necesario */
 
     background: linear-gradient(to right, #FEBDC3, #EF758A);
 
@@ -15,7 +15,7 @@
 /*CajaInformativa*/
 .caja-bootstrap{
 
-    width: clamp(280px, 70%, 600px);
+    width: clamp(200px, 90%, 1200px);
 
     background-color: #FFFAE5;
 
@@ -31,7 +31,7 @@
     color: #786951;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
-    font-size: clamp(1rem, 5vw, 2rem); 
+    font-size: clamp(0.35rem, 3vw, 2rem); 
 }
 
 /*Círculos de Pronombres*/
@@ -60,7 +60,7 @@
     color: #786951;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
-    font-size: clamp(1rem, 5vw, 2rem); 
+    font-size: clamp(0.8rem, 4vw, 1.5rem); 
 }
 
 /*SELECCIONAR PERFIL*/

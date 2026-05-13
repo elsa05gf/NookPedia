@@ -56,6 +56,10 @@ body::before{
   justify-content:center;
   gap:16px;              /* separación entre hoja y texto */
 }
+.page-root{              /* o el contenedor de la primera slide */
+  position: relative;
+  z-index: 1;            /* por debajo del about */
+}
 
 
 
@@ -111,7 +115,7 @@ body::before{
   max-width: 500px;
 }
 
-}
+
 
 /* Texto dentro de la tarjeta */
 .card-inner .tagline{
@@ -137,7 +141,7 @@ body::before{
   width: 120%;
   height: 150px;
   background-color: #ef758a;
-  margin-top: 200px;   /* AJUSTA ESTE VALOR */
+  margin-top: 250px;   /* AJUSTA ESTE VALOR */
 }
 
 .separador-rosa-claro{
@@ -196,6 +200,124 @@ body::before{
 
     font-size: 18px;
 }
+.about-section{
+  background: #fff9e5;      /* tu crema de fondo */
+  padding: 80px 20px;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;         
+
+}
+
+
+/* CONTENEDOR INTERNO */
+.about-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* COLUMNA IZQUIERDA */
+.about-left{
+  flex: 1 1 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* FILA TÍTULO + CORAZONES */
+.about-title-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+
+
+/* TÍTULO ABOUT (EPUNDA SLAB) */
+.about-title{
+  font-family: "Epunda Slab", Georgia, serif;
+  font-size: 60px;
+  font-weight:800;
+  letter-spacing: 1px;
+  color: #786951;          /* marrón del diseño */
+  margin-top: 4px;
+}
+/* CENTRAR TÍTULO + CUADRO */
+.about-left{
+  align-items: center;
+  text-align: center;
+}
+
+/* CORAZONES VISIBLES */
+.heart-icon{
+  width: 60px !important;
+  height: 60px !important;
+  object-fit: contain;
+  display: block;
+}
+
+
+
+
+/* CUADRO DE TEXTO (CREMA MÁS OSCURO + BORDE MARRÓN) */
+.about-card{
+  background: #f8eebc;     /* crema más oscuro que el fondo */
+  border: 3px solid #786951;
+  border-radius: 18px;
+  padding: 22px 24px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  max-width: 540px;
+}
+
+/* TEXTO DEL CUADRO (NUNITO) */
+.about-text{
+  font-family: "Nunito", sans-serif;
+  font-size: 22px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+/* COLUMNA DERECHA: CONTENEDOR DEL MUÑECO / MODEL 3D */
+.about-right{
+  flex: 0 0 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CAJA DEL MUÑECO (SOLO CONTENEDOR, SIN IMAGEN) */
+.about-character-box{
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 3 / 4;          /* proporción vertical tipo personaje */
+  border-radius: 18px;
+  background: #fbeee0;          /* crema muy suave */
+  border: 3px solid #f5c24c;    /* toque amarillo de la paleta */
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px){
+  .about-inner{
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  .about-left{
+    align-items: center;
+  }
+  .about-card{
+    max-width: 100%;
+  }
+}
+
 
 /*menu*/
 .landing-navbar{

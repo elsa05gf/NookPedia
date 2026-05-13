@@ -155,7 +155,48 @@
 
         </section>
 
-        <section id="about">
+        <section id="about"><section id="about" class="about-section">
+  <div class="about-inner">
+
+    <!-- COLUMNA IZQUIERDA: TÍTULO + TEXTO -->
+    <div class="about-left">
+      <div class="about-title-row">
+        <!-- IMG: corazón izquierdo -->
+        <img src="../imagenes/CorazonClaro.webp" alt="Heart left" class="heart-icon">
+        <h2 class="about-title">ABOUT</h2>
+        <!-- IMG: corazón derecho -->
+        <img src="../imagenes/CorazonOscuro.webp" alt="Heart right" class="heart-icon">
+      </div>
+
+      <div class="about-card">
+        <p class="about-text">
+          This app helps you find villagers of all types.
+          <br><strong>First up: the SWIPPING.</strong>
+          <br>You can either move to the next villager swiping left or to swipe right to drop a little heart on the one who makes you go "aww" to head out on a date.
+          <br><strong>Your call.</strong>
+        </p>
+      </div>
+    </div>
+
+    <!-- COLUMNA DERECHA: CONTENEDOR PARA EL MUÑECO / MODEL 3D -->
+    <div class="about-right">
+      <div class="about-character-box">
+     <model-viewer 
+         src="./modelos3D/Isabelle_Escena.glb"
+         alt="Isabelle 3D"
+         camera-controls
+         auto-rotate
+         shadow-intensity="1"
+         style="width:100%; height:100%; border-radius:18px;">
+     </model-viewer>
+      </div>
+    </div>
+
+  </div>
+  
+</section>
+
+
 
         </section>
 

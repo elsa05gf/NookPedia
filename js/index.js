@@ -30,7 +30,7 @@ async function loadVillagers(){
     console.log(data);
 
     // SOLO ALGUNOS PERSONAJES
-    const villagers = data.slice(0,15);
+    const villagers = data.slice(0,50);
 
     villagers.forEach(villager => {
 

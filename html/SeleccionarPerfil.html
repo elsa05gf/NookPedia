@@ -104,8 +104,10 @@
                 <!-- Los tres círculos pertenecen a una fila, pero cada círculo está dentro de una columna -->
 
                 <!-- CÍRCULO 1: THEY/THEM -->
-                <div class="col-12 col-md-4 mb-4 d-flex justify-content-center">  <!-- Clase para el GRID / Define el ancho y espacio que ocupa cada elemento en la fila -->
-                    <div class="d-flex flex-row flex-md-column align-items-center gap-3 contenedor-circulo"> <!-- Clase para el contenido del GRID / Organiza el contenido DENTRO de ese espacio-->
+                <div class="col-12 col-md-4 mb-4 d-flex justify-content-center">
+                    <!-- Clase para el GRID / Define el ancho y espacio que ocupa cada elemento en la fila -->
+                    <div class="d-flex flex-row flex-md-column align-items-center gap-3 contenedor-circulo">
+                        <!-- Clase para el contenido del GRID / Organiza el contenido DENTRO de ese espacio-->
 
                         <!-- Contenedor para el círculo y la imagen (izquierda en móvil, arriba en escritorio) -->
                         <div
@@ -114,7 +116,7 @@
                         </div>
 
                         <!-- Contenedor para la imagen (cuadro de texto) y el texto superpuesto  (derecha en móvil, abajo en escritorio) -->
-                        <div class="position-relative w-100">
+                        <div class="position-relative w-100 contenedor-click">
                             <img src="../imagenes/CuadroTextoPequeño.webp" alt="Texto" class="w-100 latido-normal">
                             <div class="position-absolute top-50 start-50 translate-middle text-nowrap texto-pronombre">
                                 They/them
@@ -134,7 +136,7 @@
                         </div>
 
                         <!-- Contenedor para la imagen (cuadro de texto) y el texto superpuesto -->
-                        <div class="position-relative w-100">
+                        <div class="position-relative w-100 contenedor-click">
                             <img src="../imagenes/CuadroTextoPequeño.webp" alt="Texto" class="w-100 latido-lento">
                             <div class="position-absolute top-50 start-50 translate-middle text-nowrap texto-pronombre">
                                 She/her
@@ -154,7 +156,7 @@
                         </div>
 
                         <!-- Contenedor para la imagen (cuadro de texto) y el texto superpuesto -->
-                        <div class="position-relative w-100">
+                        <div class="position-relative w-100 contenedor-click">
                             <img src="../imagenes/CuadroTextoPequeño.webp" alt="Texto" class="w-100 latido-normal">
                             <div class="position-absolute top-50 start-50 translate-middle text-nowrap texto-pronombre">
                                 He/him
@@ -167,6 +169,6 @@
         </div>
 
     </main>
-
+    <script src="/js/SeleccionarPerfil.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -114,6 +114,10 @@
     animation: latido 3.5s ease-in-out infinite;
 }
 
+.contenedor-click {
+    cursor: pointer;
+}
+
 /*SELECCIONAR PERFIL*/
 
 .Perfil{

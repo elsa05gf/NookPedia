@@ -118,18 +118,60 @@
     cursor: pointer;
 }
 
-/*SELECCIONAR PERFIL*/
+/*PERFIL*/
 
 .Perfil{
 
-    margin: 0;
-    padding: 0;
-    height: 100vh;           /* ← Cambia max-height por height */
-    overflow: hidden;        /* ← Evita el scroll en todo el body */
-
+    height: 100vh;  
+    overflow: hidden;        
     background: linear-gradient(to right, #FEBDC3, #EF758A);
+    display: flex;
+    flex-direction: column;  /* ← ESTO ES CLAVE */
+}
+
+.rectangulo-botones {
+
+    background-color: #FFFAE5;
+
+    border: 0.5rem solid #786951;
+    border-radius: 2rem 2rem 0 0;
+
+    border-bottom: none;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: 0 2rem;
+
+    min-height: 45vh;
+
+    display: flex;
+    align-items: center;
+}
+
+.eleccion-acrinder {
+
+    background-color: #786951;
+
+    color: #FFFAE5;
 
     font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: clamp(1rem, 2vw, 1.7rem);
+
+    min-height: 100px;
+
+    width: 100%;
+
+    border-radius: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.3s ease;
 }
 
 /*LANDING PAGE*/

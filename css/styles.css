@@ -273,6 +273,7 @@ button {
     filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.2));
     mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 70%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 70%, transparent 100%);
+    pointer-events: none;
 }
 
 /* Botón DATE */

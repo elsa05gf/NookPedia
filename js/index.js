@@ -29,10 +29,11 @@ async function loadVillagers(){
 
     console.log(data);
 
-    // SOLO ALGUNOS PERSONAJES
+    // Número de personajes q va a pillar de la api
     const villagers = data.slice(0,50);
+    const duplicatedVillagers = [...villagers, ...villagers];
 
-    villagers.forEach(villager => {
+    duplicatedVillagers.forEach(villager => {
 
         // CREAR DIV
         const card = document.createElement("div");
@@ -63,20 +64,51 @@ const prev = document.getElementById("prev");
 
 let currentPosition = 0;
 
+const moveAmount = 300;
+
+/* Total de lo que se mueve*/
+
+function getMaxScroll(){
+
+    return track.scrollWidth - track.parentElement.offsetWidth;
+}
+
+
 next.addEventListener("click", () => {
 
-    currentPosition -= 300;
+    currentPosition -= moveAmount;
+    track.style.transition = "transform 0.5s ease";
+
+    /*cuanddo llega a la ultima vuelve*/
+
+    /*if(Math.abs(currentPosition) >= getMaxScroll()){
+
+        currentPosition = 0;}*/
 
     track.style.transform = `translateX(${currentPosition}px)`;
+
+    if(Math.abs(currentPosition) >= track.scrollWidth / 2){
+
+    setTimeout(() => {
+
+        track.style.transition = "none";
+
+        currentPosition = 0;
+
+        track.style.transform =
+            `translateX(${currentPosition}px)`;
+
+    }, 500);
+}
 
 });
 
 prev.addEventListener("click", () => {
 
-    currentPosition += 300;
+    currentPosition += moveAmount;
 
     if(currentPosition > 0){
-        currentPosition = 0;
+        currentPosition = -getMaxScroll();
     }
 
     track.style.transform = `translateX(${currentPosition}px)`;

@@ -62,15 +62,24 @@
     height: 100%;
 }
 
-/* Hover círculos */
-.circulo-pronombre {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Animación de latido - círculos */
+
+@keyframes latido {
+
+    0%,
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0px #680b496e);
+    }
+
+    50% {
+        transform: scale(1.03);
+        filter: drop-shadow(0 0 12px rgba(136, 49, 107, 0.349));
+    }
 }
 
-.circulo-pronombre:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px #680b496e;
-    cursor: pointer;
+.circulo-pronombre {
+    animation: latido 2.5s ease-in-out infinite;
 }
 
 /* Contenedor de cada círculo con su cuadro de texto */
@@ -96,31 +105,18 @@
     /* Un color más vibrante */
 }
 
-/* Animación de latido - cuadros de texto */
-
-@keyframes latido {
-
-    0%,
-    100% {
-        transform: scale(1);
-        filter: drop-shadow(0 0 0px #680b496e);
-    }
-
-    50% {
-        transform: scale(1.03);
-        filter: drop-shadow(0 0 12px rgba(136, 49, 107, 0.349));
-    }
-}
-
-.latido-normal {
-    animation: latido 2.5s ease-in-out infinite;
-}
-
-.latido-lento {
-    animation: latido 3.5s ease-in-out infinite;
-}
-
 .contenedor-click {
+    cursor: pointer;
+}
+
+/* Hover sencillo para los cuadros de texto */
+.contenedor-click img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.contenedor-click:hover img {
+    transform: scale(1.02);
+    filter: brightness(1.05);
     cursor: pointer;
 }
 

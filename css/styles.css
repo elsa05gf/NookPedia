@@ -37,6 +37,7 @@ body::before{
   opacity: 0.35;
   pointer-events: none;
   z-index: 0;
+     
 }
 
 /* Contenedor principal centrado verticalmente */
@@ -47,6 +48,7 @@ body::before{
   align-items:center;
   justify-content:flex-start; 
   padding-top:100px;  
+  
 }
 
 .hero-header{
@@ -103,16 +105,18 @@ body::before{
   object-fit: contain;     /* mantiene proporción */
   z-index: 0;              /* detrás del texto */
   pointer-events: none;    /* evita que tape el texto */
+   margin-top:30px;
 }
 
 .tagline{
   position: relative;
   z-index: 1;              /* delante de la imagen */
   font-family: "Nunito", sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
   color: #333;
   max-width: 500px;
+  margin-top:55px;
 }
 
 
@@ -139,14 +143,14 @@ body::before{
 }
 .separador-rosa-fuerte{
   width: 120%;
-  height: 150px;
+  height: 100px;
   background-color: #ef758a;
   margin-top: 250px;   /* AJUSTA ESTE VALOR */
 }
 
 .separador-rosa-claro{
   width: 120%;
-  height: 75px;
+  height: 50px;
   background-color: #febdc3;
   margin-top: 0px;    /* AJUSTA ESTE VALOR */
 }
@@ -217,7 +221,7 @@ body::before{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 120px;
   flex-wrap: wrap;
 }
 
@@ -242,7 +246,7 @@ body::before{
 /* TÍTULO ABOUT (EPUNDA SLAB) */
 .about-title{
   font-family: "Epunda Slab", Georgia, serif;
-  font-size: 60px;
+  font-size: 75px;
   font-weight:800;
   letter-spacing: 1px;
   color: #786951;          /* marrón del diseño */

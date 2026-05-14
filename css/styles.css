@@ -743,35 +743,6 @@
     }
 }
 
-
-/*LANDING PAGE*/
-
-.LandingPage {
-
-    margin: 0;
-    padding: 0;
-}
-
-#acrinder {
-    background: linear-gradient(to right, #FEBDC3, #EF758A);
-    padding: 2%;
-}
-
-#date {
-    background: linear-gradient(to right, #FEBDC3, #EF758A);
-    padding: 2%;
-}
-
-#about {
-    background-color: #FFFAE5;
-    padding: 2%;
-}
-
-#location {
-    background-color: #7CC9C3;
-    padding: 2%;
-}
-
 /*footer*/
 .Landing-footer {
 

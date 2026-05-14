@@ -644,6 +644,15 @@
     width: 100%;
 }
 
+.landing-navbar-P {
+    background-color: #FFFAE5;
+
+    border-bottom: 10px solid #786951;
+
+    position: relative;
+    width: 100%;
+}
+
 /* MENÚ ESCRITORIO */
 
 .desktop-menu {

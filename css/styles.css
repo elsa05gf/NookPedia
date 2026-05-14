@@ -310,6 +310,287 @@
 }
 
 
+/*SELECCIONAR PERFIL*/
+
+.SeleccionarPerfil {
+
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    /* Cambia height por min-height */
+    overflow-y: auto;
+    /* Permite scroll vertical si es necesario */
+
+    background: linear-gradient(to right, #FEBDC3, #EF758A);
+
+    font-family: 'Nunito', sans-serif;
+}
+
+/*CajaInformativa*/
+.caja-bootstrap {
+
+    width: clamp(200px, 90%, 1200px);
+
+    background-color: #FFFAE5;
+
+    border: clamp(4px, 2vw, 10px) solid #786951;
+
+    border-radius: 2rem;
+
+    padding: 4vh 4vw;
+}
+
+.caja-bootstrap p {
+
+    color: #786951;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: clamp(0.35rem, 3vw, 2rem);
+}
+
+/* hover caja informativa */
+.caja-bootstrap {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caja-bootstrap:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px #680b496e;
+}
+
+/*Círculos de Pronombres*/
+.circulo-pronombre {
+    width: clamp(90px, 20vw, 350px);
+    height: clamp(90px, 20vw, 350px);
+    background-color: #FFFAE5;
+    border: clamp(2px, 2vw, 10px) solid #786951;
+}
+
+/* Imagen dentro del círculo */
+.circulo-pronombre img {
+    object-fit: cover;
+    object-position: center 0%;
+    width: 100%;
+    height: 100%;
+}
+
+/* Animación de latido - círculos */
+
+@keyframes latido {
+
+    0%,
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0px #680b496e);
+    }
+
+    50% {
+        transform: scale(1.03);
+        filter: drop-shadow(0 0 12px rgba(136, 49, 107, 0.349));
+    }
+}
+
+.circulo-pronombre {
+    animation: latido 2.5s ease-in-out infinite;
+}
+
+/* Contenedor de cada círculo con su cuadro de texto */
+.contenedor-circulo {
+    width: clamp(200px, 45vw, 450px);
+}
+
+.texto-pronombre {
+
+    color: #786951;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: clamp(0.8rem, 4vw, 2rem);
+}
+
+/* hover texto de pronombres */
+.texto-pronombre {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.texto-pronombre:hover {
+    color: #EF758A;
+    /* Un color más vibrante */
+}
+
+.contenedor-click {
+    cursor: pointer;
+}
+
+/* Hover sencillo para los cuadros de texto */
+.contenedor-click img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.contenedor-click:hover img {
+    transform: scale(1.02);
+    filter: brightness(1.05);
+    cursor: pointer;
+}
+
+/*PERFIL*/
+
+.Perfil {
+
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to right, #FEBDC3, #EF758A);
+    display: flex;
+    flex-direction: column;
+    /* ← ESTO ES CLAVE */
+}
+
+.rectangulo-botones {
+
+    background-color: #FFFAE5;
+    border: 0.5rem solid #786951;
+    border-radius: 2rem 2rem 0 0;
+    border-bottom: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 2rem;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+}
+
+.eleccion-acrinder {
+
+    background-color: #786951;
+    color: #FFFAE5;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: clamp(1rem, 2vw, 1.7rem);
+    min-height: 100px;
+    width: 100%;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 8px #66563d73;
+}
+
+/* Hover para los botones del rectángulo */
+.eleccion-acrinder {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 8px #66563d73;
+}
+
+.eleccion-acrinder:hover {
+    transform: scale(1.05);
+    background: repeating-linear-gradient(45deg,
+            #FFFAE5,
+            #FFFAE5 15px,
+            #FEBDC3 15px,
+            #FEBDC3 30px);
+    color: #786951;
+    box-shadow: 0 12px 16px rgba(104, 11, 73, 0.4);
+    cursor: pointer;
+}
+
+/* Estilo para el botón seleccionado (igual que el hover) */
+.eleccion-acrinder.seleccionado {
+    transform: scale(1.05);
+    background: repeating-linear-gradient(45deg,
+            #FFFAE5,
+            #FFFAE5 15px,
+            #FEBDC3 15px,
+            #FEBDC3 30px);
+    color: #786951;
+    box-shadow: 0 12px 16px rgba(104, 11, 73, 0.4);
+}
+
+.etiqueta {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: #786951;
+}
+
+/* Título START DATING */
+.titulo-start {
+    color: #FFFAE5;
+    font-size: clamp(1rem, 5vw, 5rem);
+    font-weight: bold;
+    text-shadow:
+        -3px -3px 0 #ff8fa3,
+        3px -3px 0 #ff8fa3,
+        -3px 3px 0 #ff8fa3,
+        3px 3px 0 #ff8fa3;
+    font-family: "Epunda Slab", serif;
+}
+
+.posicion-start-dating {
+    margin-top: 3rem;
+    /* Margen para móviles */
+    max-width: clamp(280px, 50vw, 700px);
+    /* Mínimo 280px, máximo 700px */
+    width: 100%;
+}
+
+/* Hover para el bloque START DATING */
+.contenedor-start-dating {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    display: block;
+    filter: drop-shadow(0 8px 12px rgba(104, 11, 73, 0.3));
+    animation: latido-suave 2s ease-in-out infinite;
+}
+
+.contenedor-start-dating:hover {
+    animation: latido-suave 0.8s ease-in-out infinite;
+}
+
+@keyframes latido-suave {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+.input-personalizado {
+    max-width: 300px;
+    font-family: 'Nunito', sans-serif !important;
+    color: #786951 !important;
+    font-weight: bold !important;
+    background-color: #FFFAE5 !important;
+    border: 0.3rem solid #786951 !important;
+    border-radius: 1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.input-personalizado:focus {
+    border-color: #EF758A !important;
+    /* Borde rosa */
+    background-color: #FFFAE5 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px #EF758A !important;
+    /* Sombra rosa suave opcional */
+}
+
+/*MEDIA QUERIES*/
+
+/* En escritorio (992px en adelante) - con margen */
+@media (min-width: 992px) {
+    .posicion-start-dating {
+        margin-top: 7.5rem;
+        /* El margen que necesita en escritorio */
+    }
+}
+
+
+
 /*footer*/
 .Landing-footer{
      background-color: #FFFAE5;

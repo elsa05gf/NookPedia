@@ -162,92 +162,8 @@
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease;
-    /* Sombra */
     box-shadow: 0 8px 8px #66563d73;
-    /* ← Añade esta línea */
 }
-
-.etiqueta {
-    font-family: 'Nunito', sans-serif;
-    font-weight: bold;
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    color: #786951;
-}
-
-/* Título START DATING */
-.titulo-start {
-    color: #FFFAE5;
-    font-size: clamp(1rem, 5vw, 5rem);
-    font-weight: bold;
-    text-shadow:
-        -3px -3px 0 #ff8fa3,
-        3px -3px 0 #ff8fa3,
-        -3px 3px 0 #ff8fa3,
-        3px 3px 0 #ff8fa3;
-    font-family: "Epunda Slab", serif;
-}
-
-/* Controla el tamaño del bloque START DATING */
-.posicion-start-dating {
-    margin-top: 3rem;
-    /* Margen para móviles */
-    max-width: clamp(280px, 50vw, 700px);
-    /* Mínimo 280px, máximo 700px */
-    width: 100%;
-}
-
-/* En escritorio (992px en adelante) - con margen */
-@media (min-width: 992px) {
-    .posicion-start-dating {
-        margin-top: 7.5rem;
-        /* El margen que necesita en escritorio */
-    }
-}
-
-.input-personalizado {
-    max-width: 300px;
-    font-family: 'Nunito', sans-serif !important;
-    color: #786951 !important;
-    font-weight: bold !important;
-    background-color: #FFFAE5 !important;
-    border: 0.3rem solid #786951 !important;
-    border-radius: 1rem !important;
-    transition: all 0.3s ease !important;
-}
-
-.input-personalizado:focus {
-    border-color: #EF758A !important;
-    /* Borde rosa */
-    background-color: #FFFAE5 !important;
-    outline: none !important;
-    box-shadow: 0 0 0 2px #EF758A !important;
-    /* Sombra rosa suave opcional */
-}
-
-/* Hover para el bloque START DATING */
-.contenedor-start-dating {
-    transition: transform 0.3s ease, filter 0.3s ease;
-    display: block;
-    filter: drop-shadow(0 8px 12px rgba(104, 11, 73, 0.3));
-    animation: latido-suave 2s ease-in-out infinite;
-}
-
-.contenedor-start-dating:hover {
-    animation: latido-suave 0.8s ease-in-out infinite;
-}
-
-@keyframes latido-suave {
-
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.02);
-    }
-}
-
 
 /* Hover para los botones del rectángulo */
 .eleccion-acrinder {
@@ -277,6 +193,88 @@
             #FEBDC3 30px);
     color: #786951;
     box-shadow: 0 12px 16px rgba(104, 11, 73, 0.4);
+}
+
+.etiqueta {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: #786951;
+}
+
+/* Título START DATING */
+.titulo-start {
+    color: #FFFAE5;
+    font-size: clamp(1rem, 5vw, 5rem);
+    font-weight: bold;
+    text-shadow:
+        -3px -3px 0 #ff8fa3,
+        3px -3px 0 #ff8fa3,
+        -3px 3px 0 #ff8fa3,
+        3px 3px 0 #ff8fa3;
+    font-family: "Epunda Slab", serif;
+}
+
+.posicion-start-dating {
+    margin-top: 3rem;
+    /* Margen para móviles */
+    max-width: clamp(280px, 50vw, 700px);
+    /* Mínimo 280px, máximo 700px */
+    width: 100%;
+}
+
+/* Hover para el bloque START DATING */
+.contenedor-start-dating {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    display: block;
+    filter: drop-shadow(0 8px 12px rgba(104, 11, 73, 0.3));
+    animation: latido-suave 2s ease-in-out infinite;
+}
+
+.contenedor-start-dating:hover {
+    animation: latido-suave 0.8s ease-in-out infinite;
+}
+
+@keyframes latido-suave {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+.input-personalizado {
+    max-width: 300px;
+    font-family: 'Nunito', sans-serif !important;
+    color: #786951 !important;
+    font-weight: bold !important;
+    background-color: #FFFAE5 !important;
+    border: 0.3rem solid #786951 !important;
+    border-radius: 1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.input-personalizado:focus {
+    border-color: #EF758A !important;
+    /* Borde rosa */
+    background-color: #FFFAE5 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px #EF758A !important;
+    /* Sombra rosa suave opcional */
+}
+
+/*MEDIA QUERIES*/
+
+/* En escritorio (992px en adelante) - con margen */
+@media (min-width: 992px) {
+    .posicion-start-dating {
+        margin-top: 7.5rem;
+        /* El margen que necesita en escritorio */
+    }
 }
 
 

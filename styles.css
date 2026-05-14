@@ -343,7 +343,7 @@
 
 .wood-area{
     flex:1;
-    background-image:url("../imagenes/MaderaFondo.webp");
+    background-image:url("imagenes/MaderaFondo.webp");
     background-repeat:repeat-y;
     background-size:100% auto;
     background-position:center;

@@ -91,3 +91,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+const btnExit = document.getElementById("btn-exit");
+
+    btnExit.addEventListener("click", () => {
+        // Animamos la salida de la pantalla actual
+        gsap.to(inicioDemo, {
+            opacity: 0,
+            y: 30, 
+            duration: 0.5,
+            ease: "power2.in",
+            onComplete: () => {
+                // Redirigimos al index.html
+                window.location.href = "../html/index.html";
+            }
+        });
+    });

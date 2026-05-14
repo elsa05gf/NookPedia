@@ -1053,3 +1053,458 @@
 }
 
 /*  FINAL Landing page MODEL VIEWER E INICIO */
+:root {
+    --ac-cream: #FFFDF3;
+    --ac-brown: #5A4E42;
+    --ac-pink-light: #FFC0CB;
+    --ac-pink-dark: #F57597;
+    --ac-mint-blue: #7CC9C3;
+    --ac-green: #A4D4A2;
+    --ac-yellow: #F7D359;
+    --ac-red: #FF7C68;
+}
+
+/* --- ESTILOS DE LA PANTALLA DE INICIO --- */
+
+#inicio-demo {
+    /* Gradiente rosa */
+    background: linear-gradient(90deg, var(--ac-pink-light) 0%, var(--ac-pink-dark) 100%);
+
+}
+
+.logo-img-big {
+    width: 60px;    
+    height: auto;
+}
+
+.logo-title {
+    font-family: 'Epunda Slab', serif; 
+    font-size: 4.5rem;
+    color: var(--ac-cream);
+    letter-spacing: 2px;
+    font-weight: bolder;
+    
+}
+
+.btn-acrinder {
+    font-family: 'Nunito', serif; 
+    background-color: var(--ac-cream);
+    color: var(--ac-brown);
+    border: none;
+    border-radius: 50px;
+    padding: 8px 45px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 280px;
+    
+    /* Sombra para el efecto de botón 3D tipo juego */
+    box-shadow: 0px 6px 0px #F8EEBB, 0px 10px 15px rgba(0,0,0,0.15);
+    cursor: pointer;
+    outline: none;
+}
+
+/* Ocultar el botón original predeterminado si es necesario */
+button {
+    font-family: nunito, sans-serif;
+}
+
+/* Fin de la Pantalla de Inicio */
+
+/* DEMOCARDS STYLE  INICIO */
+
+
+.logo-img-small {
+    width: 60px;    
+    height: auto;
+    margin: 2rem;
+
+}
+
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* FONDOS (PARED Y SUELO DE MADERA) */
+#bg-top {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 70%;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+}
+.bg-presentation { background-color: #F6F1D9; } /* Color crema inicial */
+.bg-reject { background: linear-gradient(90deg, var(--ac-yellow) 0%, var(--ac-red) 100%); }       /* Color rojo al rechazar */
+.bg-accept { background: linear-gradient(90deg, var(--ac-green) 0%, var(--ac-mint-blue) 100%); }       /* Color verde al aceptar */
+
+#bg-bottom {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 30%;
+    z-index: 1;
+    border-top: 4px solid #B88A58;
+    /* Efecto madera con gradientes css */
+    background: repeating-linear-gradient(
+        to bottom,
+        #DEAB73,
+        #DEAB73 25px,
+        #D49F6A 25px,
+        #D49F6A 27px
+    );
+}
+
+
+/* CONTENEDOR TARJETAS */
+#cardsContainer {
+    position: relative;
+    width: 750px;
+    height: 510px;
+    z-index: 10;
+    margin-top: -10vh; /* Sube la tarjeta para cuadrar con la madera */
+}
+
+/* TARJETA ANIMAL CROSSING */
+.card-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--ac-cream);
+    border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    cursor: grab;
+}
+.card-item:active { cursor: grabbing; }
+
+/* Texto Izquierda */
+.card-info {
+    width: 60%;
+    z-index: 5;
+}
+
+.card-name {
+    font-family: 'Nunito', extra-bold, serif;
+    font-size: 5.2rem;
+    font-weight: 1000;
+    color: #7A6C5D;
+    margin-bottom: 200px;
+    margin-left: 30px;
+    line-height: 1.2;
+}
+
+.card-quote-box {
+    background-color: #F8EEBB;
+    border: 3px solid #786A50;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 150px;
+    margin-left: 30px;
+    margin-top: -120px;
+}
+
+.card-cta {
+    font-size: 2.85rem;
+    color: #7A6C5D;
+    text-align: center;
+    margin-top: -120px;
+    line-height: 1.2;
+}
+
+/* Imagen Derecha Sobresaliente */
+.card-img-container {
+    position: absolute;
+    right: 50px;
+    bottom: 70px;
+    width: 200px;
+    height: 360px; /* Más alto que la tarjeta para que sobresalga */
+    z-index: 6;
+    pointer-events: none; /* Que no interrumpa el drag */
+}
+
+.card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0px 8px 10px rgba(0,0,0,0.25));
+}
+
+/* BOTONES DE ACCIÓN */
+.controls-container {
+    position: absolute;
+    bottom: 8%;
+    display: flex;
+    gap: 50px;
+    z-index: 20;
+}
+
+.ac-btn {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    border: 5px solid #F5C24C;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    transition: transform 0.1s;
+}
+
+.ac-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 2px rgba(185, 26, 26, 0.2);
+}
+
+.ac-btn-no {
+    background-color: #F8E255;
+    color: #FF5A5A;
+}
+
+.ac-btn-yes {
+    background: var(--ac-green);
+    color: #F6F1D9;
+}
+
+/* DEMOCARDS STYLE  FINAL */
+
+/* DEMOINFO STYLE INICIO */
+
+.info-bg {
+    background: linear-gradient(135deg, #FFF9E6 0%, #F8EEBB 100%);
+    font-family: 'Nunito', sans-serif;
+    color: var(--ac-brown);
+}
+
+.max-w-5xl {
+    max-width: 1000px; /* Evita que las tarjetas se estiren demasiado en pantallas grandes */
+}
+
+/* --- TARJETA IZQUIERDA --- */
+.left-card {
+    background-color: var(--ac-cream);
+    width: 700px;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+}
+
+.info-logo-img {
+    width: 35px;
+    height: auto;
+    filter: brightness(0.6) sepia(1) hue-rotate(10deg) saturate(1.5); /* Tinte marrón */
+}
+
+.info-logo-title {
+    font-family: 'Zilla Slab', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #827562;
+}
+
+.pink-image-box {
+    background-color: #FFAEC9; /* Rosa de la caja */
+    border-radius: 10px;
+    height: 300px;
+}
+
+.villager-portrait {
+    height: 130%;
+    width: 100%;
+    position: relative;
+    top: 118px; 
+    object-fit: contain;
+    filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.2));
+    mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 70%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 70%, transparent 100%);
+    pointer-events: none;
+}
+
+/* Botón DATE */
+.btn-date {
+    background-color: #FFB3CA;
+    border: 4px solid #FF8EAB;  
+    font-family: 'Epunda Slab', serif;
+    border-radius: 30px;
+    color: white;
+    font-size: 3.5rem;   
+    font-weight: 700;
+    letter-spacing: 6.5px;  
+    padding: 0px 20px;   
+    text-shadow: 3px 3px 0px #FF8EAB, -3px -3px 0px #FF8EAB, 3px -3px 0px #FF8EAB, -3px 3px 0px #FF8EAB;
+    cursor: pointer;
+    box-shadow: 0px 4px 0px #FF8EAB; 
+    transition: transform 0.1s, box-shadow 0.1s;
+    line-height: 1;
+}
+
+.btn-date:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px #FF8EAB;
+}
+
+/* --- TARJETA DERECHA --- */
+.right-card {
+    background-color: var(--ac-cream);
+    border-radius: 40px;
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Botón cerrar amarillo */
+.btn-close-yellow {
+    top: -15px;
+    right: -15px;
+    width: 50px;
+    height: 50px;
+    background-color: #F8E255;
+    border: 4px solid #EAE0B6;
+    border-radius: 50%;
+    color: #FF5A5A;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.15);
+    transition: transform 0.1s;
+}
+
+.btn-close-yellow:active {
+    transform: scale(0.9);
+}
+
+.personality-title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #7A6C5D;
+}
+
+.title-divider {
+    border: none;
+    border-top: 4px solid #7A6C5D;
+    opacity: 1;
+    width: 60%;
+    margin-top: 5px;
+}
+
+.stats-list li {
+    font-size: 1.1rem;
+    color: #4A4A4A;
+}
+
+.stat-icon {
+    font-size: 1.4rem;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* DEMOINFO STYLE FINAL */
+
+/* DEMOMATCH STYLE INICIO */
+
+.match-final-bg {
+    /* El rosa sólido/gradiente de tu diseño */
+    background: linear-gradient(180deg, #FF9BBA 0%, #FF86AB 100%);
+    font-family: 'Nunito', sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Patrón sutil de corazoncitos de fondo (opcional, le da el toque de tu imagen) */
+.match-final-bg::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 30%;
+    background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M20 29l-1.4-1.3C13.6 23.2 10 19.9 10 16c0-3 2.4-5.4 5.4-5.4 1.7 0 3.4.8 4.6 2.1 1.2-1.3 2.9-2.1 4.6-2.1 3 0 5.4 2.4 5.4 5.4 0 3.9-3.6 7.2-8.6 11.7L20 29z" fill="rgba(255,255,255,0.15)"/></svg>');
+    pointer-events: none;
+    z-index: 0;
+}
+
+.max-w-4xl {
+    max-width: 950px;
+}
+
+/* --- Corazones Laterales (Imágenes) --- */
+.side-hearts {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    z-index: 1;
+}
+
+.left-hearts { left: 2%; }
+.right-hearts { right: 2%; }
+
+.match-heart-img {
+    width: 90px;  /* Ajusta este tamaño según lo grandes que quieras tus WebP */
+    height: auto;
+    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.1));
+}
+
+@media (max-width: 768px) {
+    .match-heart-img { width: 50px; }
+}
+
+/* --- Header --- */
+.match-logo-img {
+    width: 60px;
+    height: auto;
+    filter: brightness(0.6) sepia(1) hue-rotate(15deg) saturate(1.5);
+}
+
+/* --- Imagen del Aldeano --- */
+.match-villager-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 55vh;
+    filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.25));
+    transform-origin: bottom center;
+}
+
+/* --- Caja de Texto --- */
+.match-text-card {
+    background-color: #F8EEBB;
+    border-radius: 40px;
+    /* Truco para hacer el borde blanco doble: un inset shadow blanco + borde oscuro */
+    box-shadow: inset 0 0 0 15px white, 0px 15px 25px rgba(0,0,0,0.15);
+    border: 3px solid #EAE0B6;
+}
+
+.match-text {
+    font-size: 1.35rem;
+    font-weight: 800;
+    line-height: 1.6;
+    color: var(--ac-brown);
+    padding: 10px;
+}
+
+/* --- Flecha Inferior --- */
+.match-arrow-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(0px 3px 3px rgba(0,0,0,0.15));
+    transition: transform 0.2s;
+}
+
+.match-arrow-btn:active {
+    transform: scale(0.9) translateY(5px);
+}
+
+/* DEMOMATCH STYLE FINAL */

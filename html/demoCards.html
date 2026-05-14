@@ -2,25 +2,50 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Animal Crossing Tinder - Encuentra a tu aldeano ideal</title>
 
-    <title>ACRINDER - Find Love</title>
-
-    <!-- Google Fonts -->
+ <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&family=Epunda+Slab:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&family=Epunda+Slab:wght@300;700&display=swap" rel="stylesheet">
 
-    <!-- Tu CSS -->
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/styles.css">
-
-    <!-- Bootstrap 5.3 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 </head>
 <body>
+<main id="game-container">
+        
+        <div id="bg-top" class="bg-presentation">
+            <img src="../imagenes/Logo_Api_Marrón.webp" alt="" class="logo-img-small">
+        </div>
+        <div id="bg-bottom" class="wood-floor"></div>
 
+        <div id="cardsContainer">
+            </div>
+
+        <div class="controls-container">
+            <button id="noBtn" class="ac-btn ac-btn-no">
+                <i class="fas fa-times fs-1"></i>
+            </button>
+            <button id="matchBtn" class="ac-btn ac-btn-yes">
+                <i class="fas fa-heart fs-1"></i>
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
+    <script src="../js/cards.js"></script>
 </body>
+</html>

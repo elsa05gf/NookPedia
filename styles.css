@@ -64,7 +64,7 @@
 
 
 .logo-leaf{
-  width: 75px !important;   
+  width: 50px !important;   
   height: auto !important;
   display: block;
  
@@ -624,13 +624,18 @@
 }
 
 .eleccion-acrinder {
-
     background-color: #786951;
     color: #FFFAE5;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
-    font-size: clamp(1rem, 2vw, 1.7rem);
-    min-height: 100px;
+    
+    /* 1. Hacemos que la letra sea un pelín más pequeña en móvil para que quepa "Relationship" */
+    font-size: clamp(0.85rem, 2.5vw, 1.7rem); 
+    
+    /* 2. Hacemos que la altura mínima sea de 60px en móviles y crezca hasta 100px en PC */
+    min-height: clamp(60px, 10vw, 100px); 
+    
+    /* El resto de tu código se queda exactamente igual: */
     width: 100%;
     border-radius: 3rem;
     display: flex;
@@ -638,6 +643,7 @@
     align-items: center;
     transition: transform 0.3s ease;
     box-shadow: 0 8px 8px #66563d73;
+    padding: 0.5rem; /* Un pequeño margen interior para que el texto respire */
 }
 
 /* Hover para los botones del rectángulo */

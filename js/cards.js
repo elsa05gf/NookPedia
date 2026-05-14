@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="card-info">
                     <h2 class="card-name">${villager.name}</h2>
                     <div class="card-quote-box">${villager.quote}</div>
-                    <p class="card-cta">Want to know better?</p>
+                    <p class="card-cta">Want to know them better?</p>
                 </div>
                 <div class="card-img-container">
                     <img src="${villager.img}" alt="${villager.name}" onerror="this.src='../imagenes/Logo_API_Marrón.webp'; this.style.opacity='0.5';">

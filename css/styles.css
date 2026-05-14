@@ -5,11 +5,169 @@
 .LandingPage{
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    /* Cambia height por min-height */
-    overflow-y: auto;
-    /* Permite scroll vertical si es necesario */
+}    /* Paleta: variables con los colores que pasaste (usa las que necesites) */
+:root{
+  --pink-bg: #febdc3;    /* base rosa */
+  --cream: #fff9e5;      /* rectángulo crema */
+  --leaf-green: #017c74; /* color del título/hoja */
+  --accent: #f5c24c;
+  --text: #2b2b2b;
+}
 
+/* Fuentes: si no usas Google Fonts, define @font-face aquí */
+/* @font-face { font-family: 'Epunda Slab'; src: url('../fonts/EpundaSlab.woff2') format('woff2'); font-weight:700; font-style:normal; } */
+/* @font-face { font-family: 'Nunito'; src: url('../fonts/Nunito-Regular.woff2') format('woff2'); } */
+
+*{ box-sizing: border-box; margin:0; padding:0; }
+
+
+/* Patrón de corazones*/
+#acrinder::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,\
+  <svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 24 24'>\
+    <path fill='none' stroke='%23ffffff' stroke-opacity='0.12' stroke-width='1.2' d='M12 21s-7-4.35-9-7.5C-0.5 9.5 4 4 8.5 6.5 10 7.5 12 9 12 9s2-1.5 3.5-2.5C20 4 24.5 9.5 21 13.5 19 16.65 12 21 12 21z'/>\
+  </svg>");
+  background-repeat: repeat;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+     
+}
+
+/* Contenedor principal */
+.page-root{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start; 
+  padding-top:100px;  
+  
+}
+
+.hero-header{
+  margin-top: 10%;
+  display:flex;
+  flex-direction: row;   
+  align-items:center;
+  justify-content:center;
+  gap:16px;             
+}
+.page-root{             
+  position: relative;
+  z-index: 1;           
+}
+
+
+
+.logo-leaf{
+  width: 75px !important;   
+  height: auto !important;
+  display: block;
+ 
+}
+
+/* Título grande centrado (Epunda Slab) */
+.brand-title{
+  font-family: "Epunda Slab", Georgia, serif;
+  font-weight:800;
+  font-size:90px;       
+  line-height:0.95;
+  color: var(--cream);
+  letter-spacing:2px;
+  text-align:center;
+  margin-top:4px;
+  text-transform:uppercase;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Caja crema con subtítulo*/
+.hero-card{
+  position: relative;
+  width: fit-content;      
+  margin: 0 auto;          
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;          
+}
+
+.bg-image{
+  position: absolute;
+  inset: 0;                
+  width: 100%;
+  height: 100%;
+  object-fit: contain;    
+  z-index: 0;              
+  pointer-events: none;    
+   margin-top:30px;
+}
+
+.tagline{
+  position: relative;
+  z-index: 1;              
+  font-family: "Nunito", sans-serif;
+  font-size: clamp(0.8rem, 4vw, 2rem);
+  text-align: center;
+  color: #786951;
+  max-width: 500px;
+  margin-top:55px;
+   font-weight:bold;
+
+}
+
+
+
+/* Texto dentro de la tarjeta */
+.card-inner .tagline{
+  font-family: "Nunito", sans-serif;
+  font-size:20px;
+  color:#333;
+  text-align:center;
+  margin:0;
+  line-height:1.45;
+  font-weight:bold;
+
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px){
+  .brand-title{ font-size:48px; }
+  .logo-leaf{ width:56px; height:56px; }
+  .card-inner .tagline{ font-size:18px; }
+  .hero-card{ padding:18px; border-radius:20px; }
+}
+.separador-rosa-fuerte,
+.separador-rosa-claro{
+  width: 100vw;
+  min-width: 100vw;
+  max-width: 100vw;
+  box-sizing: border-box;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+.separador-rosa-fuerte{
+  height: 100px;
+  background-color: #ef758a;
+}
+
+.separador-rosa-claro{
+  height: 50px;
+  background-color: #febdc3;
+}
+
+
+
+
+#acrinder{
     background: linear-gradient(to right, #FEBDC3, #EF758A);
 
     font-family: 'Nunito', sans-serif;
@@ -140,13 +298,8 @@
 /*---------------------------------FIN CARRUSEL----------------------------------*/
 
 #about{
-    background-color: #FFFAE5;
-
-    border: clamp(4px, 2vw, 10px) solid #786951;
-
-    border-radius: 2rem;
-
-    padding: 4vh 4vw;
+   background-color: #FFFAE5;
+    padding: 2%;
 }
 #location{
     width: 100%;
@@ -633,6 +786,125 @@
 
     font-size: 18px;
 }
+.about-section{
+  background: #fff9e5;
+  padding: 150% 20%;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;         
+
+}
+
+
+/* CONTENEDOR INTERNO */
+.about-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 120px;
+  flex-wrap: wrap;
+}
+
+/* COLUMNA IZQUIERDA */
+.about-left{
+  flex: 1 1 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* FILA TÍTULO + CORAZONES */
+.about-title-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+
+
+/* TÍTULO ABOUT (EPUNDA SLAB) */
+.about-title{
+  font-family: "Epunda Slab", Georgia, serif;
+  font-size: 75px;
+  font-weight:800;
+  letter-spacing: 1px;
+  color: #786951;          
+  margin-top: 4px;
+}
+/* CENTRAR TÍTULO + CUADRO */
+.about-left{
+  align-items: center;
+  text-align: center;
+}
+
+/* CORAZONES VISIBLES */
+.heart-icon{
+  width: 60px !important;
+  height: 60px !important;
+  object-fit: contain;
+  display: block;
+}
+
+
+
+
+/* CUADRO DE TEXTO (CREMA MÁS OSCURO + BORDE MARRÓN) */
+.about-card{
+  background: #f8eebc;     
+  border: 3px solid #786951;
+  border-radius: 18px;
+  padding: 22px 24px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  max-width: 540px;
+}
+
+/* TEXTO DEL CUADRO (NUNITO) */
+.about-text{
+  font-family: "Nunito", sans-serif;
+  font-size: 22px;
+  line-height: 1.6;
+  color: #786951;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* COLUMNA DERECHA: CONTENEDOR DEL MUÑECO / MODEL 3D */
+.about-right{
+  flex: 0 0 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CAJA DEL MUÑECO (SOLO CONTENEDOR, SIN IMAGEN) */
+.about-character-box{
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 3 / 4;          
+  border-radius: 18px;
+  background: #fbeee0;          
+  border: 3px solid #241a0300;    
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px){
+  .about-inner{
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  .about-left{
+    align-items: center;
+  }
+  .about-card{
+    max-width: 100%;
+  }
+}
+
 
 /*menu*/
 .landing-navbar {
@@ -642,6 +914,7 @@
 
     position: fixed;
     width: 100%;
+    z-index: 999;
 }
 
 .landing-navbar-P {
@@ -753,6 +1026,23 @@
 }
 
 /* RESPONSIVE */
+@media (max-width: 900px){
+  .about-inner{
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .about-right{
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .about-left{
+    width: 100%;
+  }
+
+
 
 @media (max-width: 991px) {
 
@@ -760,3 +1050,6 @@
         min-height: 85px;
     }
 }
+}
+
+/*  FINAL Landing page MODEL VIEWER E INICIO */

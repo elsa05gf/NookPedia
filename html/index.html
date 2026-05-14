@@ -98,18 +98,87 @@
         </div>
 
     </nav>
+   
 
 
     </header>
 
     <main>
         <section id="acrinder">
+            <div class="page-root">
 
+                <!-- LOGO + TITULO CENTRADO -->
+                <header class="hero-header">
+                    <img src="../imagenes/Logo_Api_Marrón.webp"
+                         alt="Logo"
+                         class="logo-leaf">
+
+                    <h1 class="brand-title">ACRINDER</h1>
+                </header>
+
+                <!-- CAJA CREMA CON SUBTITULO -->
+                <section class="hero-card">
+                    <img src="../imagenes/CuadroTextoInicio.webp" class="bg-image" alt="Fondo del texto">
+                    <p class="tagline">
+                        Discover the new exclusive dating app from Animal Crossing.
+                    </p>
+                </section>
+
+            </div>
         </section>
 
-        <section id="about">
+        <!-- RECTÁNGULO ROSA FUERTE -->
+        <div class="separador-rosa-fuerte"></div>
 
-        </section>
+        <!-- RECTÁNGULO ROSA CLARITO (mitad de alto) -->
+        <div class="separador-rosa-claro"></div>
+
+        <section id="about" class="about-section">
+  <div class="about-inner">
+
+    <!-- COLUMNA IZQUIERDA: TÍTULO + TEXTO -->
+    <div class="about-left">
+      <div class="about-title-row">
+        <!-- Corazón izquierdo -->
+        <img src="../imagenes/CorazonClaro.webp" alt="Heart left" class="heart-icon">
+        <h2 class="about-title">ABOUT</h2>
+        <!-- Corazón derecho -->
+        <img src="../imagenes/CorazonOscuro.webp" alt="Heart right" class="heart-icon">
+      </div>
+
+      <div class="about-card">
+        <p class="about-text">
+          This app helps you find villagers of all types.
+          <br>
+          <br>First up: the SWIPPING.
+          <br>
+          <br>You can either move to the next villager swiping left or to swipe right to drop a little heart on the one who makes you go "aww" to head out on a date.
+          <br><strong>Your call.</strong>
+        </p>
+      </div>
+    </div>
+
+    <!-- MODEL 3D -->
+    <div class="about-right">
+      <div class="about-character-box">
+     <model-viewer 
+         src="../modelos3D/Isabelle_Escena.glb"
+         alt="Isabelle 3D"
+         camera-controls
+         auto-rotate
+         shadow-intensity="1"
+         style="width:100%; height:100%; border-radius:18px;">
+     </model-viewer>
+      </div>
+    </div>
+
+  </div>
+  
+</section>
+
+<!-- SEPARADORES INFERIORES -->
+<div class="separador-rosa-claro"></div>
+<div class="separador-rosa-fuerte"></div>
 
         <section id="location">
 
@@ -201,6 +270,8 @@
             </a>
 
         </section>
+
+    <script src="js/script.js"></script>
 
     </main>
 

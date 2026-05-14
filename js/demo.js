@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ease: "power2.in",
             onComplete: () => {
                 // Una vez termina la animación, redirigimos al nuevo HTML
-                window.location.href = "../html/demoCards.html";
+                window.location.href = "demoCards.html";
             }
         });
     });
@@ -102,7 +102,7 @@ const btnExit = document.getElementById("btn-exit");
             ease: "power2.in",
             onComplete: () => {
                 // Redirigimos al index.html
-                window.location.href = "../html/index.html";
+                window.location.href = "index.html";
             }
         });
     });

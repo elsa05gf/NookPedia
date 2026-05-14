@@ -102,7 +102,7 @@ const btnExit = document.getElementById("btn-exit");
             ease: "power2.in",
             onComplete: () => {
                 // Redirigimos al index.html
-                window.location.href = "index.html";
+                window.location.href = "../index.html";
             }
         });
     });
